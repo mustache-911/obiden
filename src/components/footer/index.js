@@ -76,7 +76,7 @@ const ResponsiveToolBar = () => {
                 color: 'white',
               }}
             >
-              © 2022 Diagnosis. All rights reserved.
+              © 2022 Olimpíada da Independência. All rights reserved.
             </Typography>
         </Stack>
       </Container>

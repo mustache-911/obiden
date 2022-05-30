@@ -17,10 +17,10 @@ const Home = (props) => {
             <Box style={{ backgroundImage: "url(/Home/landing_page.svg)" }} className={styles.homeLandingContainer}>
                 <Stack direction="column" justifyContent="center">
                     <Typography variant="h1">
-                        Welcome to Diagnosis
+                        Olímpiada da Independência
                     </Typography>
                     <Typography variant="h3">
-                        Share your cases
+                        Teste
                     </Typography>
                 </Stack>
             </Box>
