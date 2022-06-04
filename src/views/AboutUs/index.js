@@ -8,7 +8,9 @@ import BasicModal from '../../components/modal/index.js'
 const AboutUs = (props) => {
     const { language } = useContext(LanguageContext)
     const profileList = [
-        {title: "Mickey Mouse", subtitle:"Disney character", description:"Hi, i'm mickey mouse!", urlImage: "url(./Home/mickey_mouse.jpg)"}
+        {title: "Mickey Mouse", subtitle:"Disney character", description:"Hi, i'm Mickey Mouse!", urlImage: "url(./Home/mickey_mouse.jpg)"},
+        {title: "Minnie Mouse", subtitle:"Disney character", description:"Hi, i'm Minnie Mouse!", urlImage: "url(./Home/minnie_mouse.png)"},
+        {title: "Donald Duck", subtitle:"Disney character", description:"Hi, i'm Donald Duck!", urlImage: "url(./Home/donald_duck.jpg)"}
     ]
     const profileModal = () => {
         return profileList.map(p => (
@@ -49,7 +51,7 @@ const AboutUs = (props) => {
                     <Typography variant="h3" bgcolor={'pink'} sx={{ mb: 10 }} >
                         Nossos Fundadores
                     </Typography>
-                    <Stack direction="row" justifyContent="center">
+                    <Stack direction="row" justifyContent="center" spacing={7}>
                         {profileModal()}
                     </Stack>
                 </Stack>

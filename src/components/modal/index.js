@@ -1,8 +1,9 @@
-import styles from './modal.css';
+import styles from './modal.module.css';
 import * as React from 'react';
 import { Box, Stack, Typography } from '@mui/material'; 
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
+import { Card } from '@mui/material/Card';
 
 const style = {
   position: 'absolute',
@@ -26,13 +27,16 @@ export default function BasicModal(props) {
 
   return ( 
     <div>
-      <Box sx={{width: 300, height: 300, bgcolor: 'orange', margin: 2, cursor: 'pointer'}} onClick={handleOpen}>
-        <Stack direction="column" justifyContent="center" className={styles.flex}>
-            <Box style={{backgroundImage: "url(./Home/mickey_mouse.jpg)", width: 150, height: 150}} className={styles.profilePicture} />
-            <Box sx={{bgcolor: '#fff', borderRadius: 2}}>
-                {props.title}
-            </Box>
-        </Stack>
+      <Box className={styles.card} onClick={handleOpen}>
+          <Box style={{backgroundImage: "url(./Home/mickey_mouse.jpg)", width: 150, height: 150}} className={styles.profilePicture} />
+          <Box sx={{bgcolor: '#fff', borderRadius: 2}} className={styles.textBox}>
+            <Typography id="modal-modal-title" variant="h4">
+              {props.title}
+            </Typography>
+            <Typography id="modal-modal-title" variant="h6">
+              {props.subtitle}
+            </Typography>
+          </Box>
       </Box>
       <Modal
         open={open}
@@ -41,7 +45,7 @@ export default function BasicModal(props) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Stack direction="column" justifyContent="center">
+          <Stack direction="column" justifyContent="center" className={styles.flex}>
             <Box style={{ backgroundImage: "url(./Home/mickey_mouse.jpg)", width: 300, height: 300}} className={styles.flex}>
             </Box>
             <Typography id="modal-modal-title" variant="h6" component="h2">
