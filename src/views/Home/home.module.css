@@ -41,6 +41,7 @@
 .homeLandingContainer p{
     font-size: 2em;
     font-weight: 300;
+    padding: 20px;
 }
 
 .btn {
@@ -102,7 +103,7 @@
 }
 
 .homeParticipate {
-    background-image: url('starBackground.jpg');
+    background-image: url('starBackground.svg');
     background-position:center top;
     background-size:cover;
 
@@ -130,13 +131,186 @@
     padding: 30px 20px;
 }
 
-.homeParticipate h3{
+.homeParticipateCard h3{
     font-size: 3em;
     padding-bottom: 20px;
 }
 
-.homeParticipate p{
+.homeParticipateCard p{
     font-weight: thin;
     font-size: 1.5em;
     line-height: 1.5em;
+}
+
+.timelineInitialText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px 10%;
+}
+
+.timelineInitialText h2{
+    font-size: 3em;
+    padding-bottom: 20px;
+}
+
+.timelineInitialText p{
+    font-size: 1em;
+}
+
+.timeline{
+    margin: 0 15%;
+}
+
+.timelineContent{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.timelineContent br{
+    display: block;
+    content: "";
+    margin: 0px;
+}
+
+.timelineContent h3{
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.timelineContent h4{
+    font-size: 1em;
+    color: #fff;
+}
+
+.timelineInformation{
+    background: #fff;
+    padding: 10px 10px;
+    color: #aaa;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1150px){
+    .homeLandingWhatIs h3{
+        font-size: 2.5em;
+    }
+
+    .homeLandingWhatIs p{
+        font-size: 1em;
+    }
+
+    .timeline{
+        margin: 5%;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 900px){
+    .homeLandingWhatIs h3{
+        font-size: 2em;
+    }
+
+    .homeLandingWhatIs p{
+        font-size: 1em;
+    }
+
+    .timelineInitialText{
+        margin: 70px 30px 30px 30px;
+    }
+
+    .timeline{
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 767px){
+    .homeLandingContainer h1{
+        font-size: 3em;
+    
+        text-shadow: 
+        0 .5px 0 #ccc, 
+        0 1px 0 #c9c9c9, 
+        0 1.5px 0 #bbb, 
+        0 2px 0 #b9b9b9, 
+        0 2.5px 0 #aaa, 
+        0 3px .5px rgba(0,0,0,.1), 
+        0 0 2.5px rgba(0,0,0,.1), 
+        0 .5px 1.5px rgba(0,0,0,.3), 
+        0 1.5px 2.5px rgba(0,0,0,.2), 
+        0 2.5px 5px rgba(0,0,0,.25), 
+        0 5px 5px rgba(0,0,0,.2), 
+        0 10px 10px rgba(0,0,0,.15);
+    }
+    
+    .homeLandingContainer p{
+        font-size: 1em;
+        padding-top: 20px;
+    }
+
+    .homeContent{
+        flex-direction: column;
+    }
+
+    .landingImage{
+        width: 90%;
+        height: 50vh;
+        margin: 20px;
+    }
+
+    .homeLandingWhatIs{
+        width: 90%;
+        height: fit-content;
+    }
+
+    .homeLandingWhatIs h3{
+        font-size: 2.5em;
+    }
+
+    .homeLandingWhatIs p{
+        font-size: 1em;
+    }
+
+    .homeParticipateCard{
+        width: 75vh;
+    }
+
+    .homeParticipateCard h3{
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+
+    .homeParticipateCard p{
+        font-size: 1em;
+    }
+
+    .timelineInitialText{
+        margin: 70px 10px 30px 10px;
+    }
+    .timelineInitialText h2{
+        font-size: 2em;
+    }
+
+    .timelineInitialText p{
+        font-size: .75em;
+    }
+
+    .timeline{
+        margin: 0;
+    }
+
+    .timeline h3{
+        font-size: 2em;
+    }
+
+    .timeline h4{
+        font-size: 0.75em;
+    }
+
+    .timeline p{
+        font-size: 0.75em;
+    }
+
 }
