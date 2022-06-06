@@ -4,20 +4,25 @@ import { Box, Stack, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import { Card } from '@mui/material/Card';
+import { Margin } from '@mui/icons-material';
 
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 600,
+  // minWidth: 200,
+  // maxWidth: 650,
+  width: 650,
+  // maxHeight: 560,
+  // minHeight: 100,
   height: 560,
-  bgcolor: 'background.paper',
+  bgcolor: '#eee',
   border: '2px solid #F0A528',
   borderRadius: 5,
   boxShadow: 24,
   p: 4,
-//   overflow: 'scroll',
+  overflow: 'scroll',
 };
 
 export default function BasicModal(props) {
@@ -26,14 +31,14 @@ export default function BasicModal(props) {
   const handleClose = () => setOpen(false);
 
   return ( 
-    <div>
+    <div className={styles.cardContainer}>
       <Box className={styles.card} onClick={handleOpen}>
-          <Box style={{backgroundImage: "url(./Home/mickey_mouse.jpg)", width: 150, height: 150}} className={styles.profilePicture} />
-          <Box sx={{bgcolor: '#fff', borderRadius: 2}} className={styles.textBox}>
-            <Typography id="modal-modal-title" variant="h4">
+          <Box style={{backgroundImage: props.urlImage}} className={styles.profilePicture} />
+          <Box className={styles.textBox}>
+            <Typography id="modal-modal-title" variant="h4" sx={{fontWeight: 'medium', fontSize: 28, mb: 1, color: '#333', textTransform: 'uppercase'}} className={styles.text}>
               {props.title}
             </Typography>
-            <Typography id="modal-modal-title" variant="h6">
+            <Typography id="modal-modal-subtitle" variant="subtitle2" sx={{fontWeight: 'medium', fontSize: 12, color: '#999', textTransform: 'uppercase'}} className={styles.text}>
               {props.subtitle}
             </Typography>
           </Box>
@@ -45,16 +50,16 @@ export default function BasicModal(props) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Stack direction="column" justifyContent="center" className={styles.flex}>
-            <Box style={{ backgroundImage: "url(./Home/mickey_mouse.jpg)", width: 300, height: 300}} className={styles.flex}>
+          <Stack direction="column" justifyContent="center">
+            <Box style={{ backgroundImage: props.urlImage, display: 'block'}} className={styles.imageModal}>
             </Box>
-            <Typography id="modal-modal-title" variant="h6" component="h2">
+            <Typography id="modal-modal-title" variant="h4" sx={{fontWeight: 'medium', fontSize: 28, margin: 1.2, color: '#333', textAlign: 'center', display: 'block', textTransform: 'uppercase'}} className={styles.text}>
               {props.title}
             </Typography>
-            <Typography id="modal-modal-subtitle" variant="h6" component="h2">
+            <Typography id="modal-modal-subtitle" variant="subtitle2" sx={{fontWeight: 'medium', fontSize: 12, color: '#999', mb: 2, textAlign: 'center', display: 'block', textTransform: 'uppercase'}} className={styles.text}>
               {props.subtitle}
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            <Typography id="modal-modal-description" sx={{ mt: 2, display: 'block', textAlign: 'justify' }} className={styles.text}>
               {props.description}
             </Typography>
           </Stack>
