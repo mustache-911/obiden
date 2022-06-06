@@ -64,7 +64,7 @@ const Home = props => {
                 </div>
             </Box>
 
-            <Box style={{ background: '#f5f5f5' }}>
+            <Box style={{ background: '#f9f9f9' }}>
                 <Box className={styles.timelineInitialText}>
                     <h2>JORNADA INDEPENDÊNCIA</h2>
                     <p>
@@ -78,7 +78,7 @@ const Home = props => {
                 <Timeline position="alternate" className={styles.timeline}>
                     <TimelineItem>
                         <TimelineOppositeContent sx={{ m: 'auto 0' }}>
-                            3 a 10 de julho
+                            <p>3 a 10 de julho</p>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
@@ -113,7 +113,7 @@ const Home = props => {
 
                     <TimelineItem>
                         <TimelineOppositeContent sx={{ m: 'auto 0' }}>
-                            31 de julho a 7 de agosto
+                            <p>31 de julho a 7 de agosto</p>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
@@ -128,7 +128,7 @@ const Home = props => {
                                 <h3>FASE 02</h3>
                                 <div className={styles.timelineInformation}>
                                     <p>
-                                        A sgunda fase será realizada de forma
+                                        A segunda fase será realizada de forma
                                         remota. Os inscritos poderão fazer a
                                         prova acessando a internet em
                                         computador, notebook, tablet ou celular.
@@ -148,7 +148,7 @@ const Home = props => {
 
                     <TimelineItem>
                         <TimelineOppositeContent sx={{ m: 'auto 0' }}>
-                            28 de agosto
+                            <p>28 de agosto</p>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
@@ -186,7 +186,7 @@ const Home = props => {
 
                     <TimelineItem>
                         <TimelineOppositeContent sx={{ m: 'auto 0' }}>
-                            12 de outubro
+                            <p>12 de outubro</p>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
