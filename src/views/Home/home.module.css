@@ -54,7 +54,7 @@
     color: #fff;
 }
 
-.btn:hover {
+.homeLandingContainer .btn:hover {
     transform: scale(1.1);
     transition: 0.5s ease-in-out;
     background-color: #01873B;
@@ -160,6 +160,13 @@
     font-size: 1em;
 }
 
+.timelineContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .timeline{
     margin: 0 15%;
 }
@@ -191,6 +198,19 @@
     color: #aaa;
     font-weight: 700;
     margin: 10px 0;
+}
+
+.regulation{
+    margin: 50px;
+}
+
+.regulation .btn{
+    background: #fff;
+    color: #212121;
+    border: 1px solid #212121;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 900px) and (max-width: 1150px){
@@ -274,16 +294,16 @@
     }
 
     .homeParticipateCard{
-        width: 75vh;
+        width: 65vh;
     }
 
     .homeParticipateCard h3{
-        font-size: 2em;
-        line-height: 1.5em;
+        font-size: 1.75em;
+        line-height: 1.25em;
     }
 
     .homeParticipateCard p{
-        font-size: 1em;
+        font-size: .8em;
     }
 
     .timelineInitialText{
@@ -311,6 +331,10 @@
 
     .timeline p{
         font-size: 0.75em;
+    }
+
+    .regulation h3{
+        font-size: .75em;
     }
 
 }
@@ -367,16 +391,16 @@
     }
 
     .homeParticipateCard{
-        width: 60vh;
+        width: 50vh;
     }
 
     .homeParticipateCard h3{
-        font-size: 1.75em;
+        font-size: 1.5em;
         line-height: 1.25em;
     }
 
     .homeParticipateCard p{
-        font-size: .75em;
+        font-size: .65em;
     }
 
     .timelineInitialText{
@@ -414,6 +438,10 @@
 
     .timeline p{
         font-size: 0.6em;
+    }
+
+    .regulation h3{
+        font-size: .75em;
     }
 
 }

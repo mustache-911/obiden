@@ -11,6 +11,7 @@ import {
 } from '@mui/lab'
 import { useContext } from 'react'
 import { LanguageContext } from '../../context/language'
+import pdf from './regulation.pdf'
 
 const Home = props => {
     const { language } = useContext(LanguageContext)
@@ -64,7 +65,10 @@ const Home = props => {
                 </div>
             </Box>
 
-            <Box style={{ background: '#f9f9f9' }}>
+            <Box
+                style={{ background: '#f9f9f9' }}
+                className={styles.timelineContainer}
+            >
                 <Box className={styles.timelineInitialText}>
                     <h2>JORNADA INDEPENDÊNCIA</h2>
                     <p>
@@ -213,6 +217,19 @@ const Home = props => {
                         </TimelineContent>
                     </TimelineItem>
                 </Timeline>
+
+                <Box className={styles.regulation}>
+                    <h3>
+                        <a
+                            className={styles.btn}
+                            href={pdf}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Regulamento
+                        </a>
+                    </h3>
+                </Box>
             </Box>
         </Stack>
     )
