@@ -47,18 +47,26 @@
 .btn {
     margin: 20px;
     padding: 15px 15px;
-    font-size: 1.5em;
-    border-radius: 50px;
+    border-radius: 45px;
     border: 1px;
-    background-color: #212121;
-    color: #fff;
+    background-color: #212121d0;
+    color: #f9f9f9;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
-.homeLandingContainer .btn:hover {
+.btn p{
+    padding: 0;
+    font-size: 1.7em;
+    letter-spacing: 2px;
+}
+
+.btn:hover {
     transform: scale(1.1);
-    transition: 0.5s ease-in-out;
-    background-color: #01873B;
-    color: #FCB805;
+    transform: translateY(-7px);
+    transition: all 250ms ease-in-out;
+    background-color: #212121;
+    box-shadow: 0px 15px 20px rgba(58, 229, 46, 0.4);
 }
 
 .homeContent{
@@ -66,6 +74,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin: 20px 10px;
 }
 
 .landingImage{
@@ -264,10 +273,15 @@
         0 5px 5px rgba(0,0,0,.2), 
         0 10px 10px rgba(0,0,0,.15);
     }
-    
+
     .homeLandingContainer p{
         font-size: 1em;
         padding-top: 20px;
+    }
+
+    .btn p{
+        font-size: 1em;
+        padding: 0;
     }
 
     .homeContent{
@@ -364,7 +378,12 @@
     }
 
     .btn{
-        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    .btn p{
+        font-size: .7em;
+        padding: 0;
     }
 
     .homeContent{

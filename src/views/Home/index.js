@@ -28,7 +28,9 @@ const Home = props => {
                     INDEPENDÊNCIA <br /> OU <br /> MORTE
                 </h1>
                 <p>Participe da 1ª edição da Olimpíada da Independência</p>
-                <button className={styles.btn}>Inscreva-se agora</button>
+                <button className={styles.btn}>
+                    <p>INSCREVA-SE</p>
+                </button>
             </Box>
 
             <Box className={styles.homeContent}>
