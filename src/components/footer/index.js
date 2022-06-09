@@ -29,6 +29,7 @@ import ITAJunior from './Footer_img/ITAJunior.png'
 
 
 
+
 const pages = PAGES.NAMES;
 const links = PAGES.LINKS;
 
@@ -75,7 +76,8 @@ const ResponsiveToolBar = () => {
             <Box
               component="img"
               sx={{
-              
+                marginRight:'5px',
+                cursor:'pointer',
                 height: '100%',
                 width: '100%',
                 maxHeight: { xs: 233, md: 167 },
@@ -83,26 +85,103 @@ const ResponsiveToolBar = () => {
               }}
               alt="Logo Observatório Nacional"
               src={ON}
+              onClick={()=>navigate(window.location.replace('https://www.gov.br/observatorio/pt-br'))}
             />
-            <Box
+            
+            
+             <Box>
+             <Typography
+                
+                noWrap
+                alignItems="right"
+                justifyContent="right"
+                textAlign="center"   
+                sx={{
+                  my:-0.5,
+                  cursor:'pointer',
+                  color:'#fff',
+                  display: { xs: 'block', md: 'flex' },
+                  fontFamily: 'Signika, sans-serif;',
+                  fontWeight:'light',
+                  fontSize:'8pt',
+                  letterSpacing:'0px',
+                  marginRight:'5pt',
+                  marginLeft:'3px',
+                  textDecoration: 'none',
+                }}
+                onClick={()=>navigate(window.location.replace('https://dados.gov.br/organization/about/secretariaespecialdacultura'))}
+              >
+              SECRETARIA ESPECIAL DA
+            </Typography> 
+             <Typography
+                noWrap
+                alignItems="right"
+                justifyContent="right"
+                textAlign="right"   
+                sx={{
+                  cursor:'pointer',
+                  color:'#fff',
+                  display: { xs: 'block', md: 'flex' },
+                  letterSpacing:'0px',
+                  fontFamily: 'Signika, sans-serif;',
+                  fontSize:'8pt',
+                  fontWeight:'SemiBold',
+                  marginRight:'5pt',
+                }}
+                onClick={()=>navigate(window.location.replace('https://dados.gov.br/organization/about/secretariaespecialdacultura'))}
+              >
+             CULTURA
+            </Typography> 
+            </Box>
+             <Box>
+             <Typography
+                noWrap
+                alignItems="right"
+                justifyContent="right"
+                textAlign="right"   
+                sx={{
+                  my:-0.5,
+                  cursor:'pointer',
+                  color:'#fff',
+                  letterSpacing:'0px',
+                  display: { xs: 'block', md: 'flex' },
+                  fontWeight:'light',
+                  fontFamily: 'Signika, sans-serif;',
+                  fontSize:'8pt',
+                  textDecoration: 'none',
+                }}
+                onClick={()=>navigate(window.location.replace('https://www.gov.br/turismo/pt-br'))}
+              >
+                MINISTÉRIO DO
+            </Typography> 
+             <Typography
+                noWrap
+                alignItems="right"
+                justifyContent="right"
+                textAlign="right"   
+                sx={{
+                  cursor:'pointer',
+                  letterSpacing:'0px',
+                  color:'#fff',
+                  display: { xs: 'block', md: 'flex' },
+                  fontFamily:'Signika, sans-serif;',
+                  fontSize:'8pt',
+                  fontWeight:'SemiBold',
+                  textDecoration: 'none',
+                }}
+                onClick={()=>navigate(window.location.replace('https://www.gov.br/turismo/pt-br'))}
+              >
+             TURISMO
+            </Typography> 
+            </Box>
+            
+
+              <Box
               component="img"
               
               sx={{
                 margin:2,
-                height: '100%',
-                width: '100%',
-                maxHeight: { xs: 233, md: 167 },
-                maxWidth: { xs: 250, md: 250 },
-              }}
-              alt="Logo Secult."
-              src={Secult}
-            />
-            <Box
-              
-              component="img"
-              
-              sx={{
-                margin:2,
+                cursor:'pointer',
                 height: '100%',
                 width: '100%',
                 maxHeight: { xs: 233, md: 200 },
@@ -110,15 +189,16 @@ const ResponsiveToolBar = () => {
               }}
               alt="MCTI"
               src={MCTI}
+              onClick={()=>navigate(window.location.replace('https://www.gov.br/mcti/pt-br'))}
             />
-            <Box
+             <Box
               
               component="img"
               
               sx={{
                 margin:2,
                 maxHeight: { xs: 233, md: 100 },
-                maxWidth: { xs: 250, md: 210 },
+                maxWidth: { xs: 230, md: 210 },
               }}
               alt="Logo ITA Junior"
               src={ITAJunior}
@@ -137,16 +217,49 @@ const ResponsiveToolBar = () => {
             <Twitter  onClick={()=>navigate('/')}sx={[{color: 'white', fontSize: '2.5rem'},
                             {'&:hover': {color:'black', cursor:'pointer', transition:'0.3s'}}]}/>
           </Stack>
+          <Box 
+            alignItems="center"
+            justifyContent="center"
+            sx={{
+              display: {xs:'block',md:'flex'},
+             
+           }}
+            
+          >
+           <Box 
+              alignItems="center"
+              justifyContent="center"
+              textAlign="center" 
+              >
           <Typography
               variant="p"
               noWrap
               sx={{
-                my: 3,
+                marginRight:'2pt',
+               
                 color: 'white',
               }}
             >
-              © 2022 Olimpíada da Independência. All rights reserved.
+              © 2022 Olimpíada da Independência.
             </Typography>
+            </Box>
+            <Box 
+              alignItems="center"
+              justifyContent="center"
+              textAlign="center" 
+              >
+            <Typography
+              variant="p"
+              noWrap
+              textAlign="right" 
+              sx={{
+                color: 'white',
+              }}
+            >
+              All rights reserved.
+            </Typography>
+            </Box>
+            </Box>
         </Stack>
       </Container>
     </Box>
