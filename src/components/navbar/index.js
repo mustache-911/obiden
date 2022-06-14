@@ -62,21 +62,22 @@ const ResponsiveAppBar = () => {
 
   return (
     <div>
-      <AppBar position="static" style={{ background: mainColor, height: '15vh'}}>
+        <AppBar position="static" sx={{ maxHeight: { xs:'15vh',md:'13vh'}}} style={{ background: '#002443'}}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
           <Box
               
               component="img"
               sx={{
+                margin:'5px',
                 cursor:'pointer',
                 height: '100%',
                 width: '100%',
-                maxHeight: { xs: 200, md:250 },
-                maxWidth: { xs: 275, md: 215 }
+                maxHeight: { xs: 190, md:250 },
+                maxWidth: { xs: 180, md: 215 }
               }}
               onClick={()=>navigate('./')}
-              alt="The house from the offer."
+              alt="Logo Olimpiada da Independência"
               src={Logo}
              
             />

@@ -14,13 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import Card from '@mui/material/Card';
-import Image from 'material-ui-image'
 import MCTI from './Footer_img/MCTI.png'
 import ON from './Footer_img/on.png'
 import Secult from './Footer_img/SECULT E MT.png'
@@ -43,7 +37,7 @@ const ResponsiveToolBar = () => {
 
 
   return (
-    <Box style={{ background: mainColor }}>
+    <Box style={{ background: '#002443' }}>
       <Container maxWidth="xl">
         <Stack direction="column" alignItems="center" justifyContent="center" spacing={2} sx={{py: 4}}>
           <Stack flexWrap={'wrap'} direction="row" alignItems="center" justifyContent="center">
