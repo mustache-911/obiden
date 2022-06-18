@@ -1,5 +1,5 @@
 import styles from './home.module.css'
-import { Box, Stack, Card } from '@mui/material'
+import { Box, Stack, Card, Typography, CardContent} from '@mui/material'
 import {
     Timeline,
     TimelineItem,
@@ -12,6 +12,7 @@ import {
 import { useContext } from 'react'
 import { LanguageContext } from '../../context/language'
 import pdf from './regulation.pdf'
+import categoryCard from '../../components/categoriaCard'
 
 const Home = props => {
     const { language } = useContext(LanguageContext)
@@ -55,16 +56,25 @@ const Home = props => {
             </Box>
 
             <Box className={styles.homeParticipate}>
-                <div className={styles.homeParticipateCard}>
-                    <h3>
-                        PARA TODAS AS <br /> MENTES INOVADORAS
-                    </h3>
-                    <p>
-                        A Celeritas é aberta ao público, incluindo alunos do
-                        Ensino Fundamental, Médio e Superior e todas as mentes
-                        inquietas que se interessarem pela transformação.
-                    </p>
-                </div>
+                <Stack>
+                    <categoryCard/>
+                    <Card sx={{ minWidth: 275 }}>
+                        <CardContent>
+                            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                                Word of the Day
+                            </Typography>
+                            <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                adjective
+                            </Typography>
+                            <Typography variant="body2">
+                                well meaning and kindly.
+                                <br />
+                                {'"a benevolent smile"'}
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Stack>
+
             </Box>
 
             <Box
