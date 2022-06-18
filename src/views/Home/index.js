@@ -54,7 +54,7 @@ const Home = props => {
                 </Card>
             </Box>
 
-            <Box className={styles.homeParticipate}>
+            <Box className={styles.homeParticipate} id='categorias'>
                 <div className={styles.homeParticipateCard}>
                     <h3>
                         PARA TODAS AS <br /> MENTES INOVADORAS
