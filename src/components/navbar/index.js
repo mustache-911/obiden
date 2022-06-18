@@ -135,9 +135,6 @@ const ResponsiveAppBar = () => {
             <ColorButton variant="contained" href='/regulamento' startIcon={<AutoStoriesIcon/>} disableRipple>
              Regulamento
             </ColorButton>
-            <ColorButton variant="contained" href='/login' startIcon={<AccountCircleOutlinedIcon/>} disableRipple>
-             Login
-            </ColorButton>
             </Stack>
             </Box>
               
