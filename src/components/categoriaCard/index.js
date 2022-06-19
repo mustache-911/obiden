@@ -68,7 +68,7 @@ const CategoryCard = () => {
             <Stack>
                 <Container sx={{ marginTop: "1rem", marginBottom: "5rem", display: "flex", flexDirection: "column", alignItens: "center", justifyContent: "center" }}>
                     <h1>QUEM PODE PARTICIPAR?<br /><br /></h1>
-                    <p className={classes.p}>A olimpiada da independência sera dividida em três categorias</p>
+                    <p className={classes.p}>A Olimpíada da Independência será dividida em três categorias</p>
                 </Container>
                 <div className={responsive.Stack}>
                     <Card className={`${responsive.Card}`} sx={{ minHeight: "20rem", maxWidth: "33vw", margin: "1rem", backgrouColor: "#F2F2F2", padding: "1rem 2rem", borderRadius: "1rem" }}>
