@@ -27,7 +27,10 @@ const Home = props => {
                 <h1>
                     INDEPENDÊNCIA <br /> OU <br /> MORTE
                 </h1>
-                <p>Participe da 1ª edição da Olimpíada da Independência</p>
+                <p>
+                    Inscreva-se na Olimpíada do Bicentenário da Independência do
+                    Brasil
+                </p>
                 <button className={styles.btn}>
                     <p>INSCREVA-SE</p>
                 </button>
@@ -54,7 +57,7 @@ const Home = props => {
                 </Card>
             </Box>
 
-            <Box className={styles.homeParticipate} id='categorias'>
+            <Box className={styles.homeParticipate} id="categorias">
                 <div className={styles.homeParticipateCard}>
                     <h3>
                         PARA TODAS AS <br /> MENTES INOVADORAS
