@@ -115,7 +115,7 @@
     background-image: url('starBackground.svg');
     background-position:center top;
     background-size:cover;
-    height: clamp(0,100vh,700px);
+    height: fit-content;
     padding: clamp(0.5rem,2vh,40rem);
     display: flex;
     align-items: center;
