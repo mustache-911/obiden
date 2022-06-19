@@ -45,14 +45,11 @@ const Home = props => {
                         <span style={{ color: '#01873B' }}>INDEPENDÊNCIA</span>
                     </h3>
                     <p>
-                        A Olimpíada Brasileira de Inteligência Artificial
-                        (Celeritas) é uma competição que tem a missão de
-                        instigar a pesquisa e debate sobre inteligência
-                        artificial no Brasil. É através do fomento à inovação,
-                        praticidade, rapidez e força, que queremos promover a
-                        reflexão acerca de como é possível transformar o mundo
-                        atual, estimulando soluções criativas para os problemas
-                        cotidianos.
+                    Em 2022 comemoramos o bicentenário de nossa Independênica. 
+                    Como parte das comemorações deste bicentenário, o governo federal está promovento uma Olimpíada totalmente aberta e gratuita. 
+                    Através de provas instigantes, queremos provocar uma reflexão não só sobre a importância da Independência em sim, mas também 
+                    sobre todos os seus desdobramentos num espectro mais amplo que o histórico. Assim, as questões da Olimpíada abrangerão de Artes 
+                    à Ciências: Literatura, Pintura, Matemática, História, Geografia, Geopolítica, Música, etc.
                     </p>
                 </Card>
             </Box>
