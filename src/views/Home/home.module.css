@@ -115,10 +115,8 @@
     background-image: url('starBackground.svg');
     background-position:center top;
     background-size:cover;
-
-    height: 100vh;
-    padding: 10%;
-
+    height: clamp(0,100vh,700px);
+    padding: clamp(0.5rem,2vh,40rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,6 +135,7 @@
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 1em;
+    height: fit-content;
     padding: 30px 20px;
 }
 
