@@ -1,5 +1,5 @@
 import styles from './home.module.css'
-import { Box, Stack, Card } from '@mui/material'
+import { Box, Stack, Card, Typography } from '@mui/material'
 import {
     Timeline,
     TimelineItem,
@@ -67,6 +67,37 @@ const Home = props => {
                 </div>
             </Box>
 
+            <Box className={styles.rulesContainer}>
+                <Typography>Como funciona?</Typography>
+                <Box display={"flex"} sx={{flexDirection: "row"}}>
+                    <Card sx={{}} className={styles.rulesCard}>
+                        <Typography>A Olimpíada do Bicentenário da Independência do Brasil é <span>totalmente gratuita</span> para qualquer estudante ou cidadão do Brasil.</Typography>
+                    </Card>
+                    <img src='../../../Home/nomoney.png'/>
+                </Box>
+                <Box>
+                    <Card sx={{}} className={styles.rulesCard}>
+                    <Typography>Estudantes podem se inscrever diretamente, sem a necessidade de que a escola se inscreva.</Typography>
+                    <img src='../../../Home/lilstudent.png'/>
+                    </Card>
+                </Box>
+                <Card sx={{}} className={styles.rulesCard}>
+                    <Typography>Há 3 categorias na Olimpíada: Júnior (estudantes do Ensino Fundamental), Sênior (Estudantes do Ensino Médio) e Aberta (qualquer outro cidadão, inclusive o vô e a vó!).</Typography>
+                    <Box sx={{}} className={styles.flexBox}>
+                        <a href='#fase0102'><Box>
+                            <img src='../../../Home/lilstudent.png'/>
+                        </Box></a>
+                        <a href='#fase02'><Box>
+                            <img src='../../../Home/cllgstudent.png'/>
+                        </Box></a>
+                        <a href='#fase03'><Box>
+                            <img src='../../../Home/family.png'/>
+                        </Box></a>
+                    </Box>
+                </Card>
+                <Card sx={{}} className={styles.rulesCard}>fases</Card>
+            </Box>
+
             <Box
                 style={{ background: '#f9f9f9' }}
                 className={styles.timelineContainer}
@@ -95,6 +126,7 @@ const Home = props => {
                             <Card
                                 className={styles.timelineContent}
                                 style={{ background: '#01873B' }}
+                                id="fase0102"
                             >
                                 <h3>FASE 01</h3>
                                 <div className={styles.timelineInformation}>
@@ -130,6 +162,7 @@ const Home = props => {
                             <Card
                                 className={styles.timelineContent}
                                 style={{ background: '#FCB805' }}
+                                id="fase02"
                             >
                                 <h3>FASE 02</h3>
                                 <div className={styles.timelineInformation}>
@@ -165,6 +198,7 @@ const Home = props => {
                             <Card
                                 className={styles.timelineContent}
                                 style={{ background: '#002443' }}
+                                id="fase03"
                             >
                                 <h3>FASE 03</h3>
                                 <div className={styles.timelineInformation}>
@@ -203,6 +237,7 @@ const Home = props => {
                             <Card
                                 className={styles.timelineContent}
                                 style={{ background: '#01873B' }}
+                                id="fase04"
                             >
                                 <h3>FASE 04</h3>
                                 <div className={styles.timelineInformation}>
