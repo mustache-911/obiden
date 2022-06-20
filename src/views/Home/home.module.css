@@ -1,28 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Roboto:wght@100;700&display=swap');
 *{
     font-family: 'Montserrat', sans-serif;
-}
-
-.flexBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-sizing: border-box;
 }
 
 .rulesCard {
-    width: 50%;
+    width: 60%;
     height: auto;
     padding: 20px;
-    margin: 20px;
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #ECF0F1;
+    background-color: #fefefe;
+    border-top: 5px #002443 solid;
 }
 
-/*.textRulesCard {
-    font-family: 'Montserrat', sans-serif;
-}*/
+.rulesCard span {
+    font-weight: 500;
+    /* font-style: italic; */
+}
+
+.rulesCategories {
+    margin: 0 2rem;
+}
 
 .homeLandingContainer {
     height: 110vh;
@@ -40,7 +41,7 @@
 }
 
 .rulesContainer {
-    height: 110vh;
+    height: 200vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,6 +52,28 @@
     background-color: #ECF0F1;
 }
 
+.flexBox {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    margin: 0.5rem auto;
+}
+
+a.linkFase {
+    display: flex;
+    /* background-color: pink; */
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    flex: 1;
+    margin: 0 1rem;
+}
+
+.linkFase h3 {
+    margin-bottom: 0.5rem;
+}
 
 .homeLandingContainer h1{
     font-size: 5em;
@@ -199,6 +222,15 @@
 }
 
 .timelineInitialText p{
+    font-size: 1em;
+}
+
+.rulesContainer h2{
+    font-size: 3em;
+    padding-bottom: 20px;
+}
+
+.rulesContainer p{
     font-size: 1em;
 }
 

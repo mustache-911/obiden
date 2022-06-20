@@ -15,7 +15,40 @@ import pdf from './regulation.pdf'
 
 const Home = props => {
     const { language } = useContext(LanguageContext)
-
+/*
+    const fase0102 = document.getElementById('fase0102');
+    const fase03 = document.getElementById('fase03');
+    const fase04 = document.getElementById('fase04');
+    let scrolled = false;
+    
+    window.onscroll = function() {
+        if(window.pageYOffset > 100) {
+            navbar.classList.remove('top');
+            if(!scrolled) {
+                fase0102.style.transform = 'translateY(-70px)';
+            }
+            setTimeout(function(){
+                navbar.style.transform = 'translateY(0px)';
+                scrolled = true;
+            }, 200)
+        } else {
+            navbar.classList.add('top');
+            scrolled = false
+        }
+    }
+    //Smooth Scrolling
+    $('#navbar a, .btn').on('click', function(e) {
+        if (this.hash !== '') {
+            e.preventDefault();
+            const hash = this.hash;
+            $('html, body').animate(
+                {
+                    scrollTop: $(hash).offset().top - 100,
+                }, 800
+            );
+        }
+    });
+*/
     return (
         <Stack
             direction="column"
@@ -67,35 +100,70 @@ const Home = props => {
                 </div>
             </Box>
 
+            {/* Resumo do Regulamento */}
             <Box className={styles.rulesContainer}>
-                <Typography>Como funciona?</Typography>
-                <Box display={"flex"} sx={{flexDirection: "row"}}>
+                <h2>COMO FUNCIONA?</h2>
+
+                {/* Gratuito */}
+                <Box className={styles.flexBox} sx={{flexDirection: "row"}}>
                     <Card sx={{}} className={styles.rulesCard}>
-                        <Typography>A Olimpíada do Bicentenário da Independência do Brasil é <span>totalmente gratuita</span> para qualquer estudante ou cidadão do Brasil.</Typography>
+                        <p>A Olimpíada do Bicentenário da Independência do Brasil é <span>totalmente gratuita</span> para qualquer estudante ou cidadão do Brasil.</p>
                     </Card>
-                    <img src='../../../Home/nomoney.png'/>
+                    <Box sx={{backgroundImage: "url(../../../Home/nomoney.png)", width: 128, height: 128}}/>
                 </Box>
-                <Box>
+
+                {/* Inscrição independente */}
+                <Box className={styles.flexBox} sx={{flexDirection: "row"}}>
+                    <Box sx={{backgroundImage: "url(../../../Home/studentComputer.png)", width: 128, height: 128}}/>
                     <Card sx={{}} className={styles.rulesCard}>
-                    <Typography>Estudantes podem se inscrever diretamente, sem a necessidade de que a escola se inscreva.</Typography>
-                    <img src='../../../Home/lilstudent.png'/>
+                        <p>Estudantes podem <span>se inscrever diretamente</span>, sem a necessidade de que a escola se inscreva.</p>
                     </Card>
                 </Box>
-                <Card sx={{}} className={styles.rulesCard}>
-                    <Typography>Há 3 categorias na Olimpíada: Júnior (estudantes do Ensino Fundamental), Sênior (Estudantes do Ensino Médio) e Aberta (qualquer outro cidadão, inclusive o vô e a vó!).</Typography>
-                    <Box sx={{}} className={styles.flexBox}>
-                        <a href='#fase0102'><Box>
-                            <img src='../../../Home/lilstudent.png'/>
-                        </Box></a>
-                        <a href='#fase02'><Box>
-                            <img src='../../../Home/cllgstudent.png'/>
-                        </Box></a>
-                        <a href='#fase03'><Box>
-                            <img src='../../../Home/family.png'/>
-                        </Box></a>
-                    </Box>
-                </Card>
-                <Card sx={{}} className={styles.rulesCard}>fases</Card>
+
+                {/* Categorias */}
+                <Box className={styles.flexBox} sx={{flexDirection: "row"}}>
+                    <Card sx={{p: 5, }} className={styles.rulesCard}>
+                        <p>Há <span>3 categorias</span> na Olimpíada: <span>Júnior</span> (estudantes do Ensino Fundamental), <span>Sênior</span> (Estudantes do Ensino Médio) e <span>Aberta</span> (qualquer outro cidadão, inclusive o vô e a vó!).</p>
+                        <Box sx={{p: 3}} className={styles.flexBox}>
+                            <Box className={styles.rulesCategories}>
+                                <Box sx={{backgroundImage: "url(../../../Home/student.png)", width: 128, height: 128, mb: 1}}/>
+                                <h4>Júnior</h4>
+                            </Box>
+                            <Box className={styles.rulesCategories}>
+                                <Box sx={{backgroundImage: "url(../../../Home/cllgstudent.png)", width: 128, height: 128, mb: 1}}/>
+                                <h4>Sênior</h4>
+                            </Box>
+                            <Box className={styles.rulesCategories}>
+                                <Box sx={{backgroundImage: "url(../../../Home/family.png)", width: 128, height: 128, mb: 1}}/>
+                                <h4>Aberta</h4>
+                            </Box>
+                        </Box>
+                    </Card>
+                </Box>
+
+                {/* Fases */}
+                <Box className={styles.flexBox} sx={{flexDirection: "row"}}>
+                    <Card sx={{p: 5}} className={styles.rulesCard}>
+                        <p>A Olimpíada é dividida em <span>4 fases</span>:</p>
+                        <Box sx={{p: 3, flexDirection: "row"}} className={styles.flexBox}>
+                            <a href='#fase0102' className={styles.linkFase}>
+                                    <Box style={{backgroundImage: "url(../../../Home/device.png)", width: 128, height: 128}} sx={{mb: 1.5}}/>
+                                    <h3>Fases 1 e 2</h3>
+                                    <p>As provas serão online e poderão ser realizadas em computador, tablet ou aplicativo.</p>
+                            </a>
+                            <a href='#fase03' className={styles.linkFase}>
+                                    <Box style={{backgroundImage: "url(../../../Home/online-test.png)", width: 128, height: 128}} sx={{mb: 1.5}}/>
+                                    <h3>Fase 3</h3>
+                                    <p>A prova será presencial ou virtual, sob supervisão.</p>
+                            </a>
+                            <a href='#fase04' className={styles.linkFase}>
+                                <Box style={{backgroundImage: "url(../../../Home/congresso-nacional-do-brasil.png)", width: 128, height: 128}} sx={{mb: 1.5}}/>
+                                <h3>Fase 4</h3>
+                                <p>Ocorrerá em Brasília e serão proporcionados transporte e hospedagem aos candidatos e responsáveis, caso necessário.</p>
+                            </a>
+                        </Box>
+                    </Card>
+                </Box>
             </Box>
 
             <Box
