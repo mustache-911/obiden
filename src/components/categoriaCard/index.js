@@ -18,7 +18,7 @@ const useStyles = makeStyles({
         marginTop: "2rem"
     },
     p: {
-        color: "yellow",
+        color: "#FCB805",
         fontFamily: "'Montserrat', sans-serif",
         fontSize: "2rem",
     },
