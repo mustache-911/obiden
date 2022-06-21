@@ -105,64 +105,77 @@ const Home = props => {
                 <h2>COMO FUNCIONA?</h2>
 
                 {/* Gratuito */}
-                <Box className={styles.flexBox} sx={{flexDirection: "row"}}>
-                    <Card sx={{}} className={styles.rulesCard}>
+                <Box className={`${styles.flexBox} ${styles.freeCost}`}>
+                    <Card className={styles.rulesCard}>
                         <p>A Olimpíada do Bicentenário da Independência do Brasil é <span>totalmente gratuita</span> para qualquer estudante ou cidadão do Brasil.</p>
                     </Card>
-                    <Box sx={{backgroundImage: "url(../../../Home/nomoney.png)", width: 128, height: 128}}/>
+                    <img src="../../../Home/nomoney.png" sx={{ m: 2 }} className={styles.iconCard}/>
                 </Box>
 
                 {/* Inscrição independente */}
-                <Box className={styles.flexBox} sx={{flexDirection: "row"}}>
-                    <Box sx={{backgroundImage: "url(../../../Home/studentComputer.png)", width: 128, height: 128}}/>
+                <Box className={`${styles.flexBox} ${styles.independentSignIn}`}>
+                    <img src="../../../Home/studentComputer.png" sx={{ m: 2 }} className={styles.iconCard}/>
                     <Card sx={{}} className={styles.rulesCard}>
                         <p>Estudantes podem <span>se inscrever diretamente</span>, sem a necessidade de que a escola se inscreva.</p>
                     </Card>
                 </Box>
 
                 {/* Categorias */}
-                <Box className={styles.flexBox} sx={{flexDirection: "row"}}>
-                    <Card sx={{p: 5, }} className={styles.rulesCard}>
+                <Box className={`${styles.flexBox} ${styles.rulesCategories}`} sx={{ width: 1}}>
+                    <Card sx={{p: 5}} className={styles.rulesCard}>
                         <p>Há <span>3 categorias</span> na Olimpíada: <span>Júnior</span> (estudantes do Ensino Fundamental), <span>Sênior</span> (Estudantes do Ensino Médio) e <span>Aberta</span> (qualquer outro cidadão, inclusive o vô e a vó!).</p>
-                        <Box sx={{p: 3}} className={styles.flexBox}>
+                        <Box className={styles.flexBox}>
                             <Box className={styles.rulesCategories}>
-                                <Box sx={{backgroundImage: "url(../../../Home/student.png)", width: 128, height: 128, mb: 1}}/>
-                                <h4>Júnior</h4>
+                                <img src="../../../Home/student.png" sx={{ m: 1 }} className={styles.iconCard}/>
+                                <h3>Júnior</h3>
                             </Box>
                             <Box className={styles.rulesCategories}>
-                                <Box sx={{backgroundImage: "url(../../../Home/cllgstudent.png)", width: 128, height: 128, mb: 1}}/>
-                                <h4>Sênior</h4>
+                                <img src="../../../Home/cllgstudent.png" sx={{ m: 1 }} className={styles.iconCard}/>
+                                <h3>Sênior</h3>
                             </Box>
                             <Box className={styles.rulesCategories}>
-                                <Box sx={{backgroundImage: "url(../../../Home/family.png)", width: 128, height: 128, mb: 1}}/>
-                                <h4>Aberta</h4>
+                                <img src="../../../Home/family.png" sx={{ m: 1 }} className={styles.iconCard}/>
+                                <h3>Aberta</h3>
                             </Box>
                         </Box>
                     </Card>
                 </Box>
 
                 {/* Fases */}
-                <Box className={styles.flexBox} sx={{flexDirection: "row"}}>
+                <Box className={styles.flexBox} sx={{flexDirection: "column", width: 1}}>
                     <Card sx={{p: 5}} className={styles.rulesCard}>
                         <p>A Olimpíada é dividida em <span>4 fases</span>:</p>
-                        <Box sx={{p: 3, flexDirection: "row"}} className={styles.flexBox}>
+                        <Box className={`${styles.flexBox} ${styles.rulesFases}`}>
                             <a href='#fase0102' className={styles.linkFase}>
-                                    <Box style={{backgroundImage: "url(../../../Home/device.png)", width: 128, height: 128}} sx={{mb: 1.5}}/>
-                                    <h3>Fases 1 e 2</h3>
-                                    <p>As provas serão online e poderão ser realizadas em computador, tablet ou aplicativo.</p>
+                                <img src="../../../Home/device.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
+                                <h3>Fases 1 e 2</h3>
+                                <p>As provas serão online e poderão ser realizadas em computador, tablet ou aplicativo.</p>
                             </a>
                             <a href='#fase03' className={styles.linkFase}>
-                                    <Box style={{backgroundImage: "url(../../../Home/online-test.png)", width: 128, height: 128}} sx={{mb: 1.5}}/>
-                                    <h3>Fase 3</h3>
-                                    <p>A prova será presencial ou virtual, sob supervisão.</p>
+                                <img src="../../../Home/online-test.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
+                                <h3>Fase 3</h3>
+                                <p>A prova será presencial ou virtual, sob supervisão.</p>
                             </a>
                             <a href='#fase04' className={styles.linkFase}>
-                                <Box style={{backgroundImage: "url(../../../Home/congresso-nacional-do-brasil.png)", width: 128, height: 128}} sx={{mb: 1.5}}/>
+                                <img src="../../../Home/congresso-nacional-do-brasil.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
                                 <h3>Fase 4</h3>
                                 <p>Ocorrerá em Brasília e serão proporcionados transporte e hospedagem aos candidatos e responsáveis, caso necessário.</p>
                             </a>
                         </Box>
                     </Card>
+                </Box>
+
+                <Box className={styles.regulation}>
+                    <h3>
+                        <a
+                            className={styles.btn}
+                            href={pdf}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Regulamento
+                        </a>
+                    </h3>
                 </Box>
             </Box>
 
@@ -322,19 +335,6 @@ const Home = props => {
                         </TimelineContent>
                     </TimelineItem>
                 </Timeline>
-
-                <Box className={styles.regulation}>
-                    <h3>
-                        <a
-                            className={styles.btn}
-                            href={pdf}
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            Regulamento
-                        </a>
-                    </h3>
-                </Box>
             </Box>
         </Stack>
     )
