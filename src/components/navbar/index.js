@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Outlet } from 'react-router-dom';
+import Home from '../../views/Home/index'
+import { Outlet, useNavigate } from 'react-router-dom';
 import ResponsiveToolBar from '../footer'
 import { useContext } from 'react';
 import { ColorContext } from '../../context/color';
@@ -18,6 +19,24 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import Logo from './Olimpiadas_Bicentenário.png'
+import PeopleIcon from '@mui/icons-material/People';
+import {Stack} from '@mui/material';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import { grey } from '@mui/material/colors';
+import { styled } from '@mui/material/styles';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import CategoryIcon from '@mui/icons-material/Category';
+import { getTabScrollButtonUtilityClass } from '@mui/material';
+
+const ColorButton = styled(Button)(({ theme }) => ({
+  color: theme.palette.getContrastText(grey[900]),
+  backgroundColor: grey[900],
+  '&:hover': {
+    backgroundColor: grey[825],
+  },
+}));
+
 
 const pages = PAGES.NAMES;
 const links = PAGES.LINKS;
@@ -28,6 +47,7 @@ const ResponsiveAppBar = () => {
   const { language, setLanguage } = useContext(LanguageContext)
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate()
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -46,29 +66,27 @@ const ResponsiveAppBar = () => {
 
   return (
     <div>
-      <AppBar position="static" style={{ background: mainColor, height: '10vh'}}>
+        <AppBar position="static" sx={{ maxHeight: { xs:'15vh',md:'13vh'}}} style={{ background: '#002443'}}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
+          <Box
+              
+              component="img"
               sx={{
-                mr: 2,
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
+                margin:'5px',
+                cursor:'pointer',
+                height: '100%',
+                width: '100%',
+                maxHeight: { xs: 190, md:250 },
+                maxWidth: { xs: 180, md: 215 }
               }}
-            >
-              LOGO
-            </Typography>
-
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+              onClick={()=>navigate('./')}
+              alt="Logo Olimpiada da Independência"
+              src={Logo}
+             
+            />
+          <Stack direction="row" alignItems="right" justifyContent="right" spacing={4}  sx={{py: 4, width:'80%'}}>
+            <Box alignItems="right" justifyContent="right" sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -84,12 +102,12 @@ const ResponsiveAppBar = () => {
                 anchorEl={anchorElNav}
                 anchorOrigin={{
                   vertical: 'bottom',
-                  horizontal: 'left',
+                  horizontal: 'center',
                 }}
                 keepMounted
                 transformOrigin={{
                   vertical: 'top',
-                  horizontal: 'left',
+                  horizontal: 'center',
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
@@ -105,67 +123,24 @@ const ResponsiveAppBar = () => {
                 ))}
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href=""
-              sx={{
-                mr: 2,
-                display: { xs: 'flex', md: 'none' },
-                flexGrow: 1,
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              LOGO
-            </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              {pages.map((page, index) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                  href={links[index]}
-                >
-                  {page}
-                </Button>
-              ))}
+      
+            <Box spacing sx={{ display: { xs: 'none', md: 'block' } }}>
+            <Stack direction="row" alignItems="right" justifyContent="right" spacing={3}  >
+            <ColorButton variant="contained" href='/aboutus' startIcon={<PeopleIcon/>} disableRipple>
+             Sobre
+            </ColorButton>
+            <ColorButton variant="contained" href='#categorias' startIcon={<CategoryIcon/>} disableRipple>
+             Categorias
+            </ColorButton>
+            <ColorButton variant="contained" href='/regulamento' startIcon={<AutoStoriesIcon/>} disableRipple>
+             Regulamento
+            </ColorButton>
+            </Stack>
             </Box>
-
-            <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: '45px' }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
+              
+            
+            
+            </Stack>
           </Toolbar>
         </Container>
       </AppBar>

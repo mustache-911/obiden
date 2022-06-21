@@ -16,7 +16,40 @@ import CategoryCard from '../../components/categoriaCard'
 
 const Home = props => {
     const { language } = useContext(LanguageContext)
-
+/*
+    const fase0102 = document.getElementById('fase0102');
+    const fase03 = document.getElementById('fase03');
+    const fase04 = document.getElementById('fase04');
+    let scrolled = false;
+    
+    window.onscroll = function() {
+        if(window.pageYOffset > 100) {
+            navbar.classList.remove('top');
+            if(!scrolled) {
+                fase0102.style.transform = 'translateY(-70px)';
+            }
+            setTimeout(function(){
+                navbar.style.transform = 'translateY(0px)';
+                scrolled = true;
+            }, 200)
+        } else {
+            navbar.classList.add('top');
+            scrolled = false
+        }
+    }
+    //Smooth Scrolling
+    $('#navbar a, .btn').on('click', function(e) {
+        if (this.hash !== '') {
+            e.preventDefault();
+            const hash = this.hash;
+            $('html, body').animate(
+                {
+                    scrollTop: $(hash).offset().top - 100,
+                }, 800
+            );
+        }
+    });
+*/
     return (
         <Stack
             direction="column"
@@ -28,7 +61,10 @@ const Home = props => {
                 <h1>
                     INDEPENDÊNCIA <br /> OU <br /> MORTE
                 </h1>
-                <p>Participe da 1ª edição da Olimpíada da Independência</p>
+                <p>
+                    Inscreva-se na Olimpíada do Bicentenário da Independência do
+                    Brasil
+                </p>
                 <button className={styles.btn}>
                     <p>INSCREVA-SE</p>
                 </button>
@@ -43,22 +79,99 @@ const Home = props => {
                         <span style={{ color: '#01873B' }}>INDEPENDÊNCIA</span>
                     </h3>
                     <p>
-                        A Olimpíada Brasileira de Inteligência Artificial
-                        (Celeritas) é uma competição que tem a missão de
-                        instigar a pesquisa e debate sobre inteligência
-                        artificial no Brasil. É através do fomento à inovação,
-                        praticidade, rapidez e força, que queremos promover a
-                        reflexão acerca de como é possível transformar o mundo
-                        atual, estimulando soluções criativas para os problemas
-                        cotidianos.
+                    Em 2022 comemoramos o bicentenário de nossa Independênica. 
+                    Como parte das comemorações deste bicentenário, o governo federal está promovento uma Olimpíada totalmente aberta e gratuita. 
+                    Através de provas instigantes, queremos provocar uma reflexão não só sobre a importância da Independência em sim, mas também 
+                    sobre todos os seus desdobramentos num espectro mais amplo que o histórico. Assim, as questões da Olimpíada abrangerão de Artes 
+                    à Ciências: Literatura, Pintura, Matemática, História, Geografia, Geopolítica, Música, etc.
                     </p>
                 </Card>
             </Box>
+
 
             <Box className={styles.homeParticipate}>
                 <Stack>
                     <CategoryCard />
                 </Stack>
+            </Box>
+
+            {/* Resumo do Regulamento */}
+            <Box className={styles.rulesContainer}>
+                <h2>COMO FUNCIONA?</h2>
+
+                {/* Gratuito */}
+                <Box className={`${styles.flexBox} ${styles.freeCost}`}>
+                    <Card className={styles.rulesCard}>
+                        <p>A Olimpíada do Bicentenário da Independência do Brasil é <span>totalmente gratuita</span> para qualquer estudante ou cidadão do Brasil.</p>
+                    </Card>
+                    <img src="../../../Home/nomoney.png" sx={{ m: 2 }} className={styles.iconCard}/>
+                </Box>
+
+                {/* Inscrição independente */}
+                <Box className={`${styles.flexBox} ${styles.independentSignIn}`}>
+                    <img src="../../../Home/studentComputer.png" sx={{ m: 2 }} className={styles.iconCard}/>
+                    <Card sx={{}} className={styles.rulesCard}>
+                        <p>Estudantes podem <span>se inscrever diretamente</span>, sem a necessidade de que a escola se inscreva.</p>
+                    </Card>
+                </Box>
+
+                {/* Categorias */}
+                <Box className={`${styles.flexBox} ${styles.rulesCategories}`} sx={{ width: 1}}>
+                    <Card sx={{p: 5}} className={styles.rulesCard}>
+                        <p>Há <span>3 categorias</span> na Olimpíada: <span>Júnior</span> (estudantes do Ensino Fundamental), <span>Sênior</span> (Estudantes do Ensino Médio) e <span>Aberta</span> (qualquer outro cidadão, inclusive o vô e a vó!).</p>
+                        <Box className={styles.flexBox}>
+                            <Box className={styles.rulesCategories}>
+                                <img src="../../../Home/student.png" sx={{ m: 1 }} className={styles.iconCard}/>
+                                <h3>Júnior</h3>
+                            </Box>
+                            <Box className={styles.rulesCategories}>
+                                <img src="../../../Home/cllgstudent.png" sx={{ m: 1 }} className={styles.iconCard}/>
+                                <h3>Sênior</h3>
+                            </Box>
+                            <Box className={styles.rulesCategories}>
+                                <img src="../../../Home/family.png" sx={{ m: 1 }} className={styles.iconCard}/>
+                                <h3>Aberta</h3>
+                            </Box>
+                        </Box>
+                    </Card>
+                </Box>
+
+                {/* Fases */}
+                <Box className={styles.flexBox} sx={{flexDirection: "column", width: 1}}>
+                    <Card sx={{p: 5}} className={styles.rulesCard}>
+                        <p>A Olimpíada é dividida em <span>4 fases</span>:</p>
+                        <Box className={`${styles.flexBox} ${styles.rulesFases}`}>
+                            <a href='#fase0102' className={styles.linkFase}>
+                                <img src="../../../Home/device.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
+                                <h3>Fases 1 e 2</h3>
+                                <p>As provas serão online e poderão ser realizadas em computador, tablet ou aplicativo.</p>
+                            </a>
+                            <a href='#fase03' className={styles.linkFase}>
+                                <img src="../../../Home/online-test.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
+                                <h3>Fase 3</h3>
+                                <p>A prova será presencial ou virtual, sob supervisão.</p>
+                            </a>
+                            <a href='#fase04' className={styles.linkFase}>
+                                <img src="../../../Home/congresso-nacional-do-brasil.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
+                                <h3>Fase 4</h3>
+                                <p>Ocorrerá em Brasília e serão proporcionados transporte e hospedagem aos candidatos e responsáveis, caso necessário.</p>
+                            </a>
+                        </Box>
+                    </Card>
+                </Box>
+
+                <Box className={styles.regulation}>
+                    <h3>
+                        <a
+                            className={styles.btn}
+                            href={pdf}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Regulamento
+                        </a>
+                    </h3>
+                </Box>
             </Box>
 
             <Box
@@ -89,6 +202,7 @@ const Home = props => {
                             <Card
                                 className={styles.timelineContent}
                                 style={{ background: '#01873B' }}
+                                id="fase0102"
                             >
                                 <h3>FASE 01</h3>
                                 <div className={styles.timelineInformation}>
@@ -124,6 +238,7 @@ const Home = props => {
                             <Card
                                 className={styles.timelineContent}
                                 style={{ background: '#FCB805' }}
+                                id="fase02"
                             >
                                 <h3>FASE 02</h3>
                                 <div className={styles.timelineInformation}>
@@ -159,6 +274,7 @@ const Home = props => {
                             <Card
                                 className={styles.timelineContent}
                                 style={{ background: '#002443' }}
+                                id="fase03"
                             >
                                 <h3>FASE 03</h3>
                                 <div className={styles.timelineInformation}>
@@ -197,6 +313,7 @@ const Home = props => {
                             <Card
                                 className={styles.timelineContent}
                                 style={{ background: '#01873B' }}
+                                id="fase04"
                             >
                                 <h3>FASE 04</h3>
                                 <div className={styles.timelineInformation}>
@@ -213,19 +330,6 @@ const Home = props => {
                         </TimelineContent>
                     </TimelineItem>
                 </Timeline>
-
-                <Box className={styles.regulation}>
-                    <h3>
-                        <a
-                            className={styles.btn}
-                            href={pdf}
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            Regulamento
-                        </a>
-                    </h3>
-                </Box>
             </Box>
         </Stack>
     )
