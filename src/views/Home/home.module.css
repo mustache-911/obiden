@@ -150,12 +150,10 @@ a.linkFase {
 .landingImage{
     margin-left: 20px;
     height: 70vh;
-    width: 50%;
+    width: 650px;
     border-radius: 10px;
-
-    background-image: url(https://www.gov.br/pt-br/campanhas/bicentenario/Bicentenrio.png/@@images/06e6dc8a-b55a-414a-82dd-8966dbdafeb6.png);
-    background-position: center top;
-    background-size: cover;
+    background-image: url(bicentenario.png);
+    background-position: center center;
 }
 
 .homeLandingWhatIs{
@@ -186,7 +184,7 @@ a.linkFase {
     background-position:center top;
     background-size:cover;
     height: fit-content;
-    padding: clamp(0.5rem,9.5vh,40rem);
+    padding: clamp(0.5rem,16vh,40rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -316,6 +314,16 @@ a.linkFase {
     .rulesCategories {
         margin: 1.5rem 1rem;
     }
+
+    .homeContent{
+        flex-direction: column;
+    }
+
+    .landingImage{
+        width: 500px;
+        height: 70vh;
+        margin: 20px;
+    }
 }
 
 @media screen and (min-width: 767px) and (max-width: 900px){
@@ -337,6 +345,16 @@ a.linkFase {
     
     .rulesCategories {
         margin: 1.5rem 1rem;
+    }
+
+    .homeContent{
+        flex-direction: column;
+    }
+
+    .landingImage{
+        width: 500px;
+        height: 70vh;
+        margin: 20px;
     }
 }
 
@@ -374,8 +392,8 @@ a.linkFase {
     }
 
     .landingImage{
-        width: 90%;
-        height: 50vh;
+        width: 490px;
+        height: 70vh;
         margin: 20px;
     }
 
@@ -515,9 +533,10 @@ a.linkFase {
     }
 
     .landingImage{
-        width: 90%;
-        height: 50vh;
-        margin: 20px;
+        width: 100%;
+        height: 390px;
+        margin: 20px 10px;
+        background-repeat: no-repeat no-repeat;
     }
 
     .homeLandingWhatIs{
