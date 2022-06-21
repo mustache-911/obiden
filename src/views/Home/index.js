@@ -1,5 +1,5 @@
 import styles from './home.module.css'
-import { Box, Stack, Card, Typography } from '@mui/material'
+import { Box, Stack, Card, Typography, CardContent } from '@mui/material'
 import {
     Timeline,
     TimelineItem,
@@ -12,6 +12,7 @@ import {
 import { useContext } from 'react'
 import { LanguageContext } from '../../context/language'
 import pdf from './regulation.pdf'
+import CategoryCard from '../../components/categoriaCard'
 
 const Home = props => {
     const { language } = useContext(LanguageContext)
@@ -87,17 +88,11 @@ const Home = props => {
                 </Card>
             </Box>
 
-            <Box className={styles.homeParticipate} id="categorias">
-                <div className={styles.homeParticipateCard}>
-                    <h3>
-                        PARA TODAS AS <br /> MENTES INOVADORAS
-                    </h3>
-                    <p>
-                        A Celeritas é aberta ao público, incluindo alunos do
-                        Ensino Fundamental, Médio e Superior e todas as mentes
-                        inquietas que se interessarem pela transformação.
-                    </p>
-                </div>
+
+            <Box className={styles.homeParticipate}>
+                <Stack>
+                    <CategoryCard />
+                </Stack>
             </Box>
 
             {/* Resumo do Regulamento */}

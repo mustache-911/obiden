@@ -182,13 +182,11 @@ a.linkFase {
 }
 
 .homeParticipate {
-    background-image: url('starBackground.svg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7) ), url('starBackground.svg');
     background-position:center top;
     background-size:cover;
-
-    height: 100vh;
-    padding: 15%;
-
+    height: fit-content;
+    padding: clamp(0.5rem,2vh,40rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,6 +205,7 @@ a.linkFase {
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 1em;
+    height: fit-content;
     padding: 30px 20px;
 }
 
