@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Home from '../../views/Home/index'
 import { Outlet, useNavigate } from 'react-router-dom';
 import ResponsiveToolBar from '../footer'
 import { useContext } from 'react';
@@ -14,20 +13,15 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Logo from './Olimpiadas_Bicentenário.png'
 import PeopleIcon from '@mui/icons-material/People';
 import {Stack} from '@mui/material';
-import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import { grey } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import CategoryIcon from '@mui/icons-material/Category';
-import { getTabScrollButtonUtilityClass } from '@mui/material';
 
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(grey[900]),
@@ -126,13 +120,13 @@ const ResponsiveAppBar = () => {
       
             <Box spacing sx={{ display: { xs: 'none', md: 'block' } }}>
             <Stack direction="row" alignItems="right" justifyContent="right" spacing={3}  >
-            <ColorButton variant="contained" href='/aboutus' startIcon={<PeopleIcon/>} disableRipple>
+            <ColorButton variant="contained" href='#sobre' startIcon={<PeopleIcon/>} disableRipple>
              Sobre
             </ColorButton>
             <ColorButton variant="contained" href='#categorias' startIcon={<CategoryIcon/>} disableRipple>
              Categorias
             </ColorButton>
-            <ColorButton variant="contained" href='/regulamento' startIcon={<AutoStoriesIcon/>} disableRipple>
+            <ColorButton variant="contained" href='#regulamento' startIcon={<AutoStoriesIcon/>} disableRipple>
              Regulamento
             </ColorButton>
             </Stack>

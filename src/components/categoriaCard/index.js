@@ -52,11 +52,11 @@ const CategoryCard = () => {
     const categorias = [
         {
             nome: "Júnior",
-            texto: "Categoria destinada aos alunos do 8o e 9o anos do Ensino Fundamental"
+            texto: "Categoria destinada aos alunos do 8º e 9º anos do Ensino Fundamental"
         },
         {
             nome: "Livre",
-            texto: "Categoria destinada a qualquer pessoa,sendo independente de idade e formação academica"
+            texto: "Categoria destinada a qualquer pessoa,sendo independente de idade e formação acadêmica"
         },
         {
             nome: "Sênior",

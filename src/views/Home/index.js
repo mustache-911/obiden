@@ -73,15 +73,16 @@ const Home = props => {
             <Box className={styles.homeContent}>
                 <Box className={styles.landingImage} />
 
-                <Card className={styles.homeLandingWhatIs}>
+                <Card className={styles.homeLandingWhatIs}
+                        id="sobre">
                     <h3>
                         <span style={{ color: '#FCB805' }}>200</span> ANOS DE{' '}
                         <span style={{ color: '#01873B' }}>INDEPENDÊNCIA</span>
                     </h3>
                     <p>
-                    Em 2022 comemoramos o bicentenário de nossa Independênica. 
+                    Em 2022 comemoramos o bicentenário de nossa Independência. 
                     Como parte das comemorações deste bicentenário, o governo federal está promovento uma Olimpíada totalmente aberta e gratuita. 
-                    Através de provas instigantes, queremos provocar uma reflexão não só sobre a importância da Independência em sim, mas também 
+                    Através de provas instigantes, queremos provocar uma reflexão não só sobre a importância da Independência em si, mas também 
                     sobre todos os seus desdobramentos num espectro mais amplo que o histórico. Assim, as questões da Olimpíada abrangerão de Artes 
                     à Ciências: Literatura, Pintura, Matemática, História, Geografia, Geopolítica, Música, etc.
                     </p>
@@ -89,14 +90,15 @@ const Home = props => {
             </Box>
 
 
-            <Box className={styles.homeParticipate}>
+            <Box className={styles.homeParticipate} id="categorias">
                 <Stack>
                     <CategoryCard />
                 </Stack>
             </Box>
 
             {/* Resumo do Regulamento */}
-            <Box className={styles.rulesContainer}>
+            <Box className={styles.rulesContainer}
+                id="regulamento">
                 <h2>COMO FUNCIONA?</h2>
 
                 {/* Gratuito */}
@@ -330,6 +332,18 @@ const Home = props => {
                         </TimelineContent>
                     </TimelineItem>
                 </Timeline>
+
+                <Box className={styles.regulation}>
+                    <h3>
+                        <a
+                            className={styles.btn}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Inscreva-se
+                        </a>
+                    </h3>
+                </Box>
             </Box>
         </Stack>
     )

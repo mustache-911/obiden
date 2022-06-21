@@ -6,18 +6,10 @@ import { useNavigate } from 'react-router-dom'
 import { Box, Stack } from '@mui/material'
 import { PAGES } from '../../constants/pages'
 import { Instagram, Facebook, LinkedIn, Twitter } from '@mui/icons-material'
-import Toolbar from '@mui/material/Toolbar'
-import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
-import Menu from '@mui/material/Menu'
-import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
-import Avatar from '@mui/material/Avatar'
-import Button from '@mui/material/Button'
-import MenuItem from '@mui/material/MenuItem'
-import MCTI from './Footer_img/MCTI.png'
+import MCTI from './Footer_img/logo_mcti_horizontal_cor_negativa.png'
 import ON from './Footer_img/on.png'
-import Secult from './Footer_img/SECULT E MT.png'
 import ITAJunior from './Footer_img/ITAJunior.png'
 
 const pages = PAGES.NAMES
@@ -107,7 +99,7 @@ const ResponsiveToolBar = () => {
                                     display: { xs: 'block', md: 'flex' },
                                     fontFamily: 'Signika, sans-serif;',
                                     fontWeight: 'light',
-                                    fontSize: '8pt',
+                                    fontSize: '9pt',
                                     letterSpacing: '0px',
                                     marginRight: '5pt',
                                     marginLeft: '3px',
@@ -146,7 +138,7 @@ const ResponsiveToolBar = () => {
                                     )
                                 }
                             >
-                                CULTURA
+                            CULTURA    
                             </Typography>
                         </Box>
                         <Box>
@@ -163,7 +155,7 @@ const ResponsiveToolBar = () => {
                                     display: { xs: 'block', md: 'flex' },
                                     fontWeight: 'light',
                                     fontFamily: 'Signika, sans-serif;',
-                                    fontSize: '8pt',
+                                    fontSize: '9pt',
                                     textDecoration: 'none'
                                 }}
                                 onClick={() =>
@@ -208,10 +200,10 @@ const ResponsiveToolBar = () => {
                             sx={{
                                 margin: 2,
                                 cursor: 'pointer',
-                                height: '100%',
-                                width: '100%',
+                                height: '80%',
+                                width: '80%',
                                 maxHeight: { xs: 233, md: 200 },
-                                maxWidth: { xs: 250, md: 300 }
+                                maxWidth: { xs: 250, md: 120 }
                             }}
                             alt="MCTI"
                             src={MCTI}
@@ -227,11 +219,19 @@ const ResponsiveToolBar = () => {
                             component="img"
                             sx={{
                                 margin: 2,
+                                cursor: 'pointer',
                                 maxHeight: { xs: 233, md: 100 },
-                                maxWidth: { xs: 230, md: 210 }
+                                maxWidth: { xs: 230, md: 170 }
                             }}
                             alt="Logo ITA Junior"
                             src={ITAJunior}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.itajunior.com.br/'
+                                    )
+                                )
+                            }
                         />
                     </Stack>
 
