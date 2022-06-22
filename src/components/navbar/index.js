@@ -97,9 +97,11 @@ const ResponsiveAppBar = () => {
               >
                 {/* Menu for mobile */}
                 {pages.map((page, index) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center" href={links[index]}>{page}</Typography>
-                  </MenuItem>
+                   <a href={links[index]} style ={{textDecoration: 'none', color: "#000"}}>
+                    <MenuItem key={page} onClick={handleCloseNavMenu}>
+                      <Typography textAlign="center">{page}</Typography>
+                    </MenuItem>
+                  </a>
                 ))}
               </Menu>
             </Box>

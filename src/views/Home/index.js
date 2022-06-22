@@ -67,11 +67,11 @@ const Home = () => {
                 </button>
             </Box>
 
-            <Box className={styles.homeContent}>
+            <Box className={styles.homeContent} id="sobre">
                 <Box className={styles.landingImage} />
 
                 <Card className={styles.homeLandingWhatIs}
-                        id="sobre">
+                        >
                     <h3>
                         <span style={{ color: '#FCB805' }}>200</span> ANOS DE{' '}
                         <span style={{ color: '#01873B' }}>INDEPENDÊNCIA</span>

@@ -153,7 +153,9 @@ a.linkFase {
     width: 70vh;
     border-radius: 10px;
     background-image: url(bicentenario.png);
-    background-position: center center;
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
 }
 
 .homeLandingWhatIs{
@@ -299,6 +301,10 @@ a.linkFase {
 }
 
 @media screen and (min-width: 900px) and (max-width: 1150px){
+    .homeLandingWhatIs{
+        width: 80vh;
+    }
+
     .homeLandingWhatIs h3{
         font-size: 2.5em;
     }
@@ -320,9 +326,10 @@ a.linkFase {
     }
 
     .landingImage{
-        width: 500px;
-        height: 70vh;
+        width: 65%;
+        height: 90vh;
         margin: 20px;
+        background-size: cover;
     }
 }
 
@@ -352,7 +359,7 @@ a.linkFase {
     }
 
     .landingImage{
-        width: 500px;
+        width: 70vh;
         height: 70vh;
         margin: 20px;
     }
@@ -392,13 +399,13 @@ a.linkFase {
     }
 
     .landingImage{
-        width: 490px;
+        width: 65vh;
         height: 70vh;
         margin: 20px;
     }
 
     .homeLandingWhatIs{
-        width: 90%;
+        width: 80%;
         height: fit-content;
     }
 
@@ -533,14 +540,14 @@ a.linkFase {
     }
 
     .landingImage{
-        width: 100%;
-        height: 390px;
+        width: 70%;
+        height: 330px;
         margin: 20px 10px;
         background-repeat: no-repeat no-repeat;
     }
 
     .homeLandingWhatIs{
-        width: 90%;
+        width: 80%;
         height: fit-content;
     }
 
@@ -660,5 +667,12 @@ a.linkFase {
 
     a.linkFase {
         margin: 1rem auto;
+    }
+
+    @media screen and (max-width: 400px){
+        .landingImage{
+            background-size: cover;
+            height: 230px;
+        }
     }
 }

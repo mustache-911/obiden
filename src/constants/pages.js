@@ -1,4 +1,4 @@
 export const PAGES = {
-    NAMES: ['Quem Somos', 'Login',],
-    LINKS: ['/aboutus', '/login']
+    NAMES: ['Sobre', 'Categorias','Regulamento'],
+    LINKS: ['#sobre', '#categorias','#regulamento']
 }

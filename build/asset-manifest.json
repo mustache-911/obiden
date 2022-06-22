@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e063b163.css",
-    "main.js": "/static/js/main.2d9ccb6b.js",
+    "main.css": "/static/css/main.bcd6ed6e.css",
+    "main.js": "/static/js/main.f1d61249.js",
     "static/media/telaIndependencia.jpg": "/static/media/telaIndependencia.adb10e481320b422c0fd.jpg",
     "static/media/ITAJunior.png": "/static/media/ITAJunior.a03b277012d71ff99d3e.png",
     "static/media/logo_mcti_horizontal_cor_negativa.png": "/static/media/logo_mcti_horizontal_cor_negativa.c6c33417d51430bf6361.png",
@@ -11,11 +11,11 @@
     "static/media/on.png": "/static/media/on.0d772581e68a775cc564.png",
     "static/media/starBackground.svg": "/static/media/starBackground.49210a925d85fdb2b53b.svg",
     "index.html": "/index.html",
-    "main.e063b163.css.map": "/static/css/main.e063b163.css.map",
-    "main.2d9ccb6b.js.map": "/static/js/main.2d9ccb6b.js.map"
+    "main.bcd6ed6e.css.map": "/static/css/main.bcd6ed6e.css.map",
+    "main.f1d61249.js.map": "/static/js/main.f1d61249.js.map"
   },
   "entrypoints": [
-    "static/css/main.e063b163.css",
-    "static/js/main.2d9ccb6b.js"
+    "static/css/main.bcd6ed6e.css",
+    "static/js/main.f1d61249.js"
   ]
 }
