@@ -1,15 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
 import { makeStyles } from '@material-ui/styles'
 import {
-    Typography,
     Stack,
     Card,
-    CardContent,
     Container,
-    Button
 } from '@mui/material'
-import { fontFamily } from '@mui/system'
 import responsive from './categoriacard.module.css'
 const useStyles = makeStyles({
     root: {

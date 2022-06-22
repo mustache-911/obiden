@@ -1,12 +1,9 @@
 import styles from './aboutus.module.css'
 import { Box, Stack, Typography } from '@mui/material'
-import { useContext } from 'react'
-import { LanguageContext } from '../../context/language'
 import BasicModal from '../../components/modal/index.js'
 
 
 const AboutUs = (props) => {
-    const { language } = useContext(LanguageContext)
     const profileList = [
         {title: "Miley Cyrus", subtitle:"Cantora, compositora e atriz norte-americana.", description:"Miley Ray Cyrus é uma cantora, compositora e atriz norte-americana. Tornou-se mundialmente popular por interpretar Miley Stewart/Hannah Montana na famosa série do Disney Channel Hannah Montana. Em 2008, Miley foi eleita pela revista americana Time como uma das 100 famosas mais bem pagas do mundo.", urlImage: "url(./Home/mickey_mouse.jpg)"},
         {title: "Prince William", subtitle:"KAREN GREENFIELD SENIOR VICE PRESIDENT, BUSINESS OPERATIONS, AND DIVERSITY & INCLUSION COUNCIL CHAIR, NATIONAL GEOGRAPHIC PARTNERS", description:"Hi, i'm Minnie Mouse!", urlImage: "url(./Home/minnie_mouse.png)"},

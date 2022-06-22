@@ -1,25 +1,14 @@
 import * as React from 'react'
-import { useContext } from 'react'
-import { ColorContext } from '../../context/color'
-import { LanguageContext } from '../../context/language'
 import { useNavigate } from 'react-router-dom'
 import { Box, Stack } from '@mui/material'
-import { PAGES } from '../../constants/pages'
-import { Instagram, Facebook, LinkedIn, Twitter } from '@mui/icons-material'
+import { Instagram, Facebook, Twitter } from '@mui/icons-material'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 import MCTI from './Footer_img/logo_mcti_horizontal_cor_negativa.png'
 import ON from './Footer_img/on.png'
 import ITAJunior from './Footer_img/ITAJunior.png'
 
-const pages = PAGES.NAMES
-const links = PAGES.LINKS
-
 const ResponsiveToolBar = () => {
-    const { mainColor } = useContext(ColorContext)
-    const { language, setLanguage } = useContext(LanguageContext)
-    const [anchorElNav, setAnchorElNav] = React.useState(null)
-    const [anchorElUser, setAnchorElUser] = React.useState(null)
     const navigate = useNavigate()
 
     return (

@@ -1,9 +1,6 @@
 import * as React from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import ResponsiveToolBar from '../footer'
-import { useContext } from 'react';
-import { ColorContext } from '../../context/color';
-import { LanguageContext } from '../../context/language'
 import { PAGES } from '../../constants/pages'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -34,28 +31,17 @@ const ColorButton = styled(Button)(({ theme }) => ({
 
 const pages = PAGES.NAMES;
 const links = PAGES.LINKS;
-const settings = ['Profile', 'Account', 'Logout'];
 
 const ResponsiveAppBar = () => {
-  const { mainColor } = useContext(ColorContext)
-  const { language, setLanguage } = useContext(LanguageContext)
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate()
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (

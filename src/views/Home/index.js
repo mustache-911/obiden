@@ -1,5 +1,5 @@
 import styles from './home.module.css'
-import { Box, Stack, Card, Typography, CardContent } from '@mui/material'
+import { Box, Stack, Card } from '@mui/material'
 import {
     Timeline,
     TimelineItem,
@@ -9,13 +9,10 @@ import {
     TimelineContent,
     TimelineOppositeContent
 } from '@mui/lab'
-import { useContext } from 'react'
-import { LanguageContext } from '../../context/language'
 import pdf from './regulation.pdf'
 import CategoryCard from '../../components/categoriaCard'
 
-const Home = props => {
-    const { language } = useContext(LanguageContext)
+const Home = () => {
 /*
     const fase0102 = document.getElementById('fase0102');
     const fase03 = document.getElementById('fase03');
@@ -106,12 +103,12 @@ const Home = props => {
                     <Card className={styles.rulesCard}>
                         <p>A Olimpíada do Bicentenário da Independência do Brasil é <span>totalmente gratuita</span> para qualquer estudante ou cidadão do Brasil.</p>
                     </Card>
-                    <img src="../../../Home/nomoney.png" sx={{ m: 2 }} className={styles.iconCard}/>
+                    <img alt="" src="../../../Home/nomoney.png" sx={{ m: 2 }} className={styles.iconCard}/>
                 </Box>
 
                 {/* Inscrição independente */}
                 <Box className={`${styles.flexBox} ${styles.independentSignIn}`}>
-                    <img src="../../../Home/studentComputer.png" sx={{ m: 2 }} className={styles.iconCard}/>
+                    <img alt="" src="../../../Home/studentComputer.png" sx={{ m: 2 }} className={styles.iconCard}/>
                     <Card sx={{}} className={styles.rulesCard}>
                         <p>Estudantes podem <span>se inscrever diretamente</span>, sem a necessidade de que a escola se inscreva.</p>
                     </Card>
@@ -123,15 +120,15 @@ const Home = props => {
                         <p>Há <span>3 categorias</span> na Olimpíada: <span>Júnior</span> (estudantes do Ensino Fundamental), <span>Sênior</span> (Estudantes do Ensino Médio) e <span>Aberta</span> (qualquer outro cidadão, inclusive o vô e a vó!).</p>
                         <Box className={styles.flexBox}>
                             <Box className={styles.rulesCategories}>
-                                <img src="../../../Home/student.png" sx={{ m: 1 }} className={styles.iconCard}/>
+                                <img alt="" src="../../../Home/student.png" sx={{ m: 1 }} className={styles.iconCard}/>
                                 <h3>Júnior</h3>
                             </Box>
                             <Box className={styles.rulesCategories}>
-                                <img src="../../../Home/cllgstudent.png" sx={{ m: 1 }} className={styles.iconCard}/>
+                                <img alt="" src="../../../Home/cllgstudent.png" sx={{ m: 1 }} className={styles.iconCard}/>
                                 <h3>Sênior</h3>
                             </Box>
                             <Box className={styles.rulesCategories}>
-                                <img src="../../../Home/family.png" sx={{ m: 1 }} className={styles.iconCard}/>
+                                <img alt="" src="../../../Home/family.png" sx={{ m: 1 }} className={styles.iconCard}/>
                                 <h3>Aberta</h3>
                             </Box>
                         </Box>
@@ -144,17 +141,17 @@ const Home = props => {
                         <p>A Olimpíada é dividida em <span>4 fases</span>:</p>
                         <Box className={`${styles.flexBox} ${styles.rulesFases}`}>
                             <a href='#fase0102' className={styles.linkFase}>
-                                <img src="../../../Home/device.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
+                                <img alt="" src="../../../Home/device.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
                                 <h3>Fases 1 e 2</h3>
                                 <p>As provas serão online e poderão ser realizadas em computador, tablet ou aplicativo.</p>
                             </a>
                             <a href='#fase03' className={styles.linkFase}>
-                                <img src="../../../Home/online-test.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
+                                <img alt="" src="../../../Home/online-test.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
                                 <h3>Fase 3</h3>
                                 <p>A prova será presencial ou virtual, sob supervisão.</p>
                             </a>
                             <a href='#fase04' className={styles.linkFase}>
-                                <img src="../../../Home/congresso-nacional-do-brasil.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
+                                <img alt="" src="../../../Home/congresso-nacional-do-brasil.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
                                 <h3>Fase 4</h3>
                                 <p>Ocorrerá em Brasília e serão proporcionados transporte e hospedagem aos candidatos e responsáveis, caso necessário.</p>
                             </a>
