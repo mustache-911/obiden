@@ -108,13 +108,13 @@ const ResponsiveAppBar = () => {
       
             <Box spacing sx={{ display: { xs: 'none', md: 'block' } }}>
             <Stack direction="row" alignItems="right" justifyContent="right" spacing={3}  >
-            <ColorButton variant="contained" href='#sobre' startIcon={<PeopleIcon/>} disableRipple>
-             Sobre
+            <ColorButton variant="contained" onClick={() => document.getElementById('sobre').scrollIntoView({block: "center", behavior: "smooth"})} startIcon={<PeopleIcon/>} disableRipple>
+             O que é?
             </ColorButton>
-            <ColorButton variant="contained" href='#categorias' startIcon={<CategoryIcon/>} disableRipple>
-             Categorias
+            <ColorButton variant="contained" onClick={() => document.getElementById('categorias').scrollIntoView({block: "center", behavior: "smooth"})} startIcon={<CategoryIcon/>} disableRipple>
+             Quem pode participar?
             </ColorButton>
-            <ColorButton variant="contained" href='#regulamento' startIcon={<AutoStoriesIcon/>} disableRipple>
+            <ColorButton variant="contained" onClick={() => document.getElementById('regulamento').scrollIntoView({block: "start", behavior: "smooth"})} startIcon={<AutoStoriesIcon/>} disableRipple>
              Regulamento
             </ColorButton>
             </Stack>

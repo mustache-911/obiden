@@ -74,7 +74,7 @@
     margin: 1rem;
 }
 
-a.linkFase {
+.linkFase {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,6 +83,7 @@ a.linkFase {
     color: #000;
     flex: 1;
     margin: 0 1rem;
+    cursor: pointer;
 }
 
 .linkFase h3 {
