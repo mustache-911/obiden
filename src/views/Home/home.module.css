@@ -1,6 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Roboto:wght@100;700&display=swap');
 *{
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+ 
+.rulesCard {
+    width: 60%;
+    height: auto;
+    padding: 20px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fefefe;
+    border-top: 5px #002443 solid;
+}
+
+.rulesCard span {
+    font-weight: 500;
+}
+
+.rulesCategories {
+    margin: 1.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
 
 .homeLandingContainer {
@@ -18,6 +43,52 @@
     background-size:cover;
 }
 
+.rulesContainer {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    background-color: #ECF0F1;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: center;
+    margin: 0.5rem auto;
+}
+
+.freeCost, .independentSignIn, .rulesFases {
+    flex-direction: row;
+}
+
+.iconCard {
+    width: 128px;
+    height: 128px;
+    margin: 1rem;
+}
+
+.linkFase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: #000;
+    flex: 1;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.linkFase h3 {
+    margin-bottom: 0.5rem;
+}
 
 .homeLandingContainer h1{
     font-size: 5em;
@@ -66,7 +137,7 @@
     transform: translateY(-7px);
     transition: all 250ms ease-in-out;
     background-color: #212121;
-    box-shadow: 0px 15px 20px rgba(58, 229, 46, 0.4);
+    box-shadow: 0px 15px 20px rgba( 31, 38, 135, 0.37 );
 }
 
 .homeContent{
@@ -80,12 +151,12 @@
 .landingImage{
     margin-left: 20px;
     height: 70vh;
-    width: 50%;
+    width: 70vh;
     border-radius: 10px;
-
-    background-image: url('./rioLandscape.jpg');
-    background-position: center top;
-    background-size: cover;
+    background-image: url(bicentenario.png);
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
 }
 
 .homeLandingWhatIs{
@@ -112,13 +183,11 @@
 }
 
 .homeParticipate {
-    background-image: url('starBackground.svg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7) ), url('starBackground.svg');
     background-position:center top;
     background-size:cover;
-
-    height: 100vh;
-    padding: 15%;
-
+    height: fit-content;
+    padding: clamp(0.5rem,16vh,40rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,6 +206,7 @@
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 1em;
+    height: fit-content;
     padding: 30px 20px;
 }
 
@@ -165,7 +235,16 @@
     padding-bottom: 20px;
 }
 
+.rulesContainer h2{
+    font-size: 3em;
+    margin: 2rem auto;
+}
+
 .timelineInitialText p{
+    font-size: 1em;
+}
+
+.rulesContainer p{
     font-size: 1em;
 }
 
@@ -210,7 +289,7 @@
 }
 
 .regulation{
-    margin: 50px;
+    margin: 3rem;
 }
 
 .regulation .btn{
@@ -223,6 +302,10 @@
 }
 
 @media screen and (min-width: 900px) and (max-width: 1150px){
+    .homeLandingWhatIs{
+        width: 80vh;
+    }
+
     .homeLandingWhatIs h3{
         font-size: 2.5em;
     }
@@ -233,6 +316,21 @@
 
     .timeline{
         margin: 5%;
+    }
+
+    .rulesCategories {
+        margin: 1.5rem 1rem;
+    }
+
+    .homeContent{
+        flex-direction: column;
+    }
+
+    .landingImage{
+        width: 65%;
+        height: 90vh;
+        margin: 20px;
+        background-size: cover;
     }
 }
 
@@ -252,7 +350,20 @@
     .timeline{
         margin: 0;
     }
+    
+    .rulesCategories {
+        margin: 1.5rem 1rem;
+    }
 
+    .homeContent{
+        flex-direction: column;
+    }
+
+    .landingImage{
+        width: 70vh;
+        height: 70vh;
+        margin: 20px;
+    }
 }
 
 @media screen and (min-width: 500px) and (max-width: 767px){
@@ -289,14 +400,38 @@
     }
 
     .landingImage{
-        width: 90%;
-        height: 50vh;
+        width: 65vh;
+        height: 70vh;
         margin: 20px;
     }
 
     .homeLandingWhatIs{
-        width: 90%;
+        width: 80%;
         height: fit-content;
+    }
+
+    .flexBox{
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .rulesCategories {
+        margin: 0 auto 0.5rem;
+    }
+
+    .iconCard {
+        width: 110px;
+        height: 110px;
+    }
+
+    .freeCost {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .independentSignIn, .rulesFases {
+        flex-direction: column;
+        width: 100%;
     }
 
     .homeLandingWhatIs h3{
@@ -326,6 +461,18 @@
     .timelineInitialText h2{
         font-size: 2em;
     }
+    
+    .rulesContainer h2{
+        font-size: 5vh;
+    }
+    
+    .rulesContainer h3{
+        font-size: 3vh;
+    }
+    
+    .rulesContainer p{
+        font-size: 2vh;
+    }
 
     .timelineInitialText p{
         font-size: .75em;
@@ -351,11 +498,14 @@
         font-size: .75em;
     }
 
+    .regulation {
+        margin: 2rem 0 4rem;
+    }
 }
 
 @media screen and (max-width: 500px){
     .homeLandingContainer h1{
-        font-size: 2.25em;
+        font-size: 4vh;
     
         text-shadow: 
         0 .5px 0 #ccc, 
@@ -391,18 +541,19 @@
     }
 
     .landingImage{
-        width: 90%;
-        height: 50vh;
-        margin: 20px;
+        width: 70%;
+        height: 330px;
+        margin: 20px 10px;
+        background-repeat: no-repeat no-repeat;
     }
 
     .homeLandingWhatIs{
-        width: 90%;
+        width: 80%;
         height: fit-content;
     }
 
     .homeLandingWhatIs h3{
-        font-size: 2em;
+        font-size: 3.5vh;
     }
 
     .homeLandingWhatIs p{
@@ -410,16 +561,16 @@
     }
 
     .homeParticipateCard{
-        width: 50vh;
+        width: 100%;
     }
 
     .homeParticipateCard h3{
-        font-size: 1.5em;
+        font-size: 3vh;
         line-height: 1.25em;
     }
 
     .homeParticipateCard p{
-        font-size: .65em;
+        font-size: 2vh;
     }
 
     .timelineInitialText{
@@ -427,11 +578,19 @@
     }
 
     .timelineInitialText h2{
-        font-size: 2em;
+        font-size: 4vh;
+    }
+    
+    .rulesContainer h2{
+        font-size: 4vh;
+    }
+
+    .rulesContainer h3{
+        font-size: 3vh;
     }
 
     .timelineInitialText p{
-        font-size: .75em;
+        font-size: 2vh;
     }
 
     .timeline{
@@ -448,19 +607,73 @@
     }
 
     .timeline h3{
-        font-size: 1.75em;
+        font-size: 3vh;
+    }
+
+    .flexBox{
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .rulesCategories {
+        margin: 0 auto 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .freeCost {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .independentSignIn, .rulesCategories {
+        flex-direction: column;
+        width: 100%;
     }
 
     .timeline h4{
-        font-size: 0.7em;
+        font-size: 1.5vh;
     }
 
     .timeline p{
-        font-size: 0.6em;
+        font-size: 1.3vh;
     }
 
     .regulation h3{
         font-size: .75em;
     }
 
+    .regulation {
+        margin: 2rem 0 4rem;
+    }
+
+    .rulesContainer h2{
+        font-size: 4vh;
+    }
+    
+    .rulesContainer h3{
+        font-size: 2.3vh;
+    }
+    
+    .rulesContainer p{
+        font-size: 2vh;
+    }
+    
+    .iconCard {
+        width: 90px;
+        height: 90px;
+    }
+
+    a.linkFase {
+        margin: 1rem auto;
+    }
+
+    @media screen and (max-width: 400px){
+        .landingImage{
+            background-size: cover;
+            height: 230px;
+        }
+    }
 }

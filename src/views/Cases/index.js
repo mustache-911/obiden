@@ -1,12 +1,10 @@
 import styles from './cases.module.css'
 import { Box, Stack, Typography } from '@mui/material'
-import { useContext, useState } from 'react'
-import { LanguageContext } from '../../context/language'
+import { useState } from 'react'
 import CardDeck from '../../components/cardDeck'
 
 
 const Cases = (props) => {
-    const { language } = useContext(LanguageContext)
     const [filterBy, setFilterBy] = useState("")
     const [orderBy, setOrderBy] = useState("")
     const filtersBy = ["Active"]

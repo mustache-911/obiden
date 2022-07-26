@@ -9,12 +9,10 @@ import {
     TimelineContent,
     TimelineOppositeContent
 } from '@mui/lab'
-import { useContext } from 'react'
-import { LanguageContext } from '../../context/language'
 import pdf from './regulation.pdf'
+import CategoryCard from '../../components/categoriaCard'
 
-const Home = props => {
-    const { language } = useContext(LanguageContext)
+const Home = () => {
 
     return (
         <Stack
@@ -27,44 +25,119 @@ const Home = props => {
                 <h1>
                     INDEPENDÊNCIA <br /> OU <br /> MORTE
                 </h1>
-                <p>Participe da 1ª edição da Olimpíada da Independência</p>
+                <p>
+                    Inscreva-se na Olimpíada do Bicentenário da Independência do
+                    Brasil
+                </p>
                 <button className={styles.btn}>
                     <p>INSCREVA-SE</p>
                 </button>
             </Box>
 
-            <Box className={styles.homeContent}>
+            <Box className={styles.homeContent} id="sobre">
                 <Box className={styles.landingImage} />
 
-                <Card className={styles.homeLandingWhatIs}>
+                <Card className={styles.homeLandingWhatIs}
+                        >
                     <h3>
                         <span style={{ color: '#FCB805' }}>200</span> ANOS DE{' '}
                         <span style={{ color: '#01873B' }}>INDEPENDÊNCIA</span>
                     </h3>
                     <p>
-                        A Olimpíada Brasileira de Inteligência Artificial
-                        (Celeritas) é uma competição que tem a missão de
-                        instigar a pesquisa e debate sobre inteligência
-                        artificial no Brasil. É através do fomento à inovação,
-                        praticidade, rapidez e força, que queremos promover a
-                        reflexão acerca de como é possível transformar o mundo
-                        atual, estimulando soluções criativas para os problemas
-                        cotidianos.
+                    Em 2022 comemoramos o bicentenário de nossa Independência. 
+                    Como parte das comemorações deste bicentenário, o governo federal está promovento uma Olimpíada totalmente aberta e gratuita. 
+                    Através de provas instigantes, queremos provocar uma reflexão não só sobre a importância da Independência em si, mas também 
+                    sobre todos os seus desdobramentos num espectro mais amplo que o histórico. Assim, as questões da Olimpíada abrangerão de Artes 
+                    à Ciências: Literatura, Pintura, Matemática, História, Geografia, Geopolítica, Música, etc.
                     </p>
                 </Card>
             </Box>
 
-            <Box className={styles.homeParticipate} id='categorias'>
-                <div className={styles.homeParticipateCard}>
+
+            <Box className={styles.homeParticipate} id="categorias">
+                <Stack>
+                    <CategoryCard />
+                </Stack>
+            </Box>
+
+            {/* Resumo do Regulamento */}
+            <Box className={styles.rulesContainer}
+                id="regulamento">
+                <h2>COMO FUNCIONA?</h2>
+
+                {/* Gratuito */}
+                <Box className={`${styles.flexBox} ${styles.freeCost}`}>
+                    <Card className={styles.rulesCard}>
+                        <p>A Olimpíada do Bicentenário da Independência do Brasil é <span>totalmente gratuita</span> para qualquer estudante ou cidadão do Brasil.</p>
+                    </Card>
+                    <img alt="" src="../../../Home/nomoney.png" sx={{ m: 2 }} className={styles.iconCard}/>
+                </Box>
+
+                {/* Inscrição independente */}
+                <Box className={`${styles.flexBox} ${styles.independentSignIn}`}>
+                    <img alt="" src="../../../Home/studentComputer.png" sx={{ m: 2 }} className={styles.iconCard}/>
+                    <Card sx={{}} className={styles.rulesCard}>
+                        <p>Estudantes podem <span>se inscrever diretamente</span>, sem a necessidade de que a escola se inscreva.</p>
+                    </Card>
+                </Box>
+
+                {/* Categorias */}
+                <Box className={`${styles.flexBox} ${styles.rulesCategories}`} sx={{ width: 1}}>
+                    <Card sx={{p: 5}} className={styles.rulesCard}>
+                        <p>Há <span>3 categorias</span> na Olimpíada: <span>Júnior</span> (estudantes do Ensino Fundamental), <span>Sênior</span> (Estudantes do Ensino Médio) e <span>Aberta</span> (qualquer outro cidadão, inclusive o vô e a vó!).</p>
+                        <Box className={styles.flexBox}>
+                            <Box className={styles.rulesCategories}>
+                                <img alt="" src="../../../Home/student.png" sx={{ m: 1 }} className={styles.iconCard}/>
+                                <h3>Júnior</h3>
+                            </Box>
+                            <Box className={styles.rulesCategories}>
+                                <img alt="" src="../../../Home/cllgstudent.png" sx={{ m: 1 }} className={styles.iconCard}/>
+                                <h3>Sênior</h3>
+                            </Box>
+                            <Box className={styles.rulesCategories}>
+                                <img alt="" src="../../../Home/family.png" sx={{ m: 1 }} className={styles.iconCard}/>
+                                <h3>Aberta</h3>
+                            </Box>
+                        </Box>
+                    </Card>
+                </Box>
+
+                {/* Fases */}
+                <Box className={styles.flexBox} sx={{flexDirection: "column", width: 1}}>
+                    <Card sx={{p: 5}} className={styles.rulesCard}>
+                        <p>A Olimpíada é dividida em <span>4 fases</span>:</p>
+                        <Box className={`${styles.flexBox} ${styles.rulesFases}`}>
+                            <Box className={styles.linkFase} onClick={() => document.getElementById('fase0102').scrollIntoView({block: "center", behavior: "smooth"})}>
+                                <img alt="" src="../../../Home/device.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
+                                <h3>Fases 1 e 2</h3>
+                                <p>As provas serão online e poderão ser realizadas em computador, tablet ou aplicativo.</p>
+                            </Box>
+                            <Box className={styles.linkFase} onClick={() => document.getElementById('fase03').scrollIntoView({block: "center", behavior: "smooth"})}>
+                                <img alt="" src="../../../Home/online-test.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
+                                <h3>Fase 3</h3>
+                                <p>A prova será presencial ou virtual, sob supervisão.</p>
+                            </Box>
+                            <Box className={styles.linkFase} onClick={() => document.getElementById('fase04').scrollIntoView({block: "center", behavior: "smooth"})}>
+                                <img alt="" src="../../../Home/congresso-nacional-do-brasil.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
+                                <h3>Fase 4</h3>
+                                <p>Ocorrerá em Brasília e serão proporcionados transporte e hospedagem aos candidatos e responsáveis, caso necessário.</p>
+                            </Box>
+                        </Box>
+                    </Card>
+                </Box>
+
+                <Box className={styles.regulation}>
                     <h3>
-                        PARA TODAS AS <br /> MENTES INOVADORAS
+                        <a
+                            className={styles.btn}
+                            href={pdf}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Regulamento
+                        </a>
                     </h3>
-                    <p>
-                        A Celeritas é aberta ao público, incluindo alunos do
-                        Ensino Fundamental, Médio e Superior e todas as mentes
-                        inquietas que se interessarem pela transformação.
-                    </p>
-                </div>
+                </Box>
             </Box>
 
             <Box
@@ -95,6 +168,7 @@ const Home = props => {
                             <Card
                                 className={styles.timelineContent}
                                 style={{ background: '#01873B' }}
+                                id="fase0102"
                             >
                                 <h3>FASE 01</h3>
                                 <div className={styles.timelineInformation}>
@@ -130,6 +204,7 @@ const Home = props => {
                             <Card
                                 className={styles.timelineContent}
                                 style={{ background: '#FCB805' }}
+                                id="fase02"
                             >
                                 <h3>FASE 02</h3>
                                 <div className={styles.timelineInformation}>
@@ -165,6 +240,7 @@ const Home = props => {
                             <Card
                                 className={styles.timelineContent}
                                 style={{ background: '#002443' }}
+                                id="fase03"
                             >
                                 <h3>FASE 03</h3>
                                 <div className={styles.timelineInformation}>
@@ -203,6 +279,7 @@ const Home = props => {
                             <Card
                                 className={styles.timelineContent}
                                 style={{ background: '#01873B' }}
+                                id="fase04"
                             >
                                 <h3>FASE 04</h3>
                                 <div className={styles.timelineInformation}>
@@ -224,11 +301,10 @@ const Home = props => {
                     <h3>
                         <a
                             className={styles.btn}
-                            href={pdf}
                             target="_blank"
                             rel="noreferrer"
                         >
-                            Regulamento
+                            Inscreva-se
                         </a>
                     </h3>
                 </Box>
