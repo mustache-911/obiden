@@ -24,6 +24,7 @@ import ITAJunior from './Footer_img/ITAJunior.png'
 
 
 
+
 const pages = PAGES.NAMES;
 const links = PAGES.LINKS;
 
