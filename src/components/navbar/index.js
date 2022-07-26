@@ -19,7 +19,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import Logo from './Olimpiadas_Bicentenário.png'
+import Logo from './Logo Olimpiada Bicentenario - colorida.png'
 import PeopleIcon from '@mui/icons-material/People';
 import {Stack} from '@mui/material';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
