@@ -19,7 +19,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import Logo from './Logo Olimpiada Bicentenario - colorida.png'
+import Logomarca from './Logo Olimpiada Bicentenario - colorida.png'
 import PeopleIcon from '@mui/icons-material/People';
 import {Stack} from '@mui/material';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
@@ -28,6 +28,7 @@ import { styled } from '@mui/material/styles';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import CategoryIcon from '@mui/icons-material/Category';
 import { getTabScrollButtonUtilityClass } from '@mui/material';
+
 
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(grey[900]),
@@ -82,7 +83,7 @@ const ResponsiveAppBar = () => {
               }}
               onClick={()=>navigate('./')}
               alt="Logo Olimpiada da Independência"
-              src={Logo}
+              src={Logomarca}
              
             />
           <Stack direction="row" alignItems="right" justifyContent="right" spacing={4}  sx={{py: 4, width:'80%'}}>
