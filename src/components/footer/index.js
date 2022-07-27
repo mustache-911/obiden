@@ -224,6 +224,20 @@ const ResponsiveToolBar = () => {
                         />
                     </Stack>
 
+
+
+const pages = PAGES.NAMES;
+const links = PAGES.LINKS;
+
+
+const ResponsiveToolBar = () => {
+  const { mainColor } = useContext(ColorContext)
+  const { language, setLanguage } = useContext(LanguageContext)
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
+
+
                     <Stack direction="row" alignItems="flex-start" spacing={3}>
                         <Instagram
                             onClick={() => navigate('/')}
@@ -251,6 +265,7 @@ const ResponsiveToolBar = () => {
                                 }
                             ]}
                         />
+
 
                         <Twitter
                             onClick={() => navigate('/')}
