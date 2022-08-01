@@ -1,4 +1,4 @@
 export const PAGES = {
-    NAMES: ['Sobre', 'Categorias','Regulamento'],
-    LINKS: ['#sobre', '#categorias','#regulamento']
+    NAMES: ['Login','Sobre', 'Categorias','Regulamento'],
+    LINKS: ["https://app.olimpiadabrasil.org/",'#sobre', '#categorias','#regulamento']
 }
