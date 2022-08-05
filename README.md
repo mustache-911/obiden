@@ -1,4 +1,4 @@
-# Diagnosis Front
+# Olimpiada da Independencia Front
 
 Frontend of the Independence Olympiada
 
