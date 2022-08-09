@@ -14,6 +14,10 @@ import MCTI from './Footer_img/MCTI.png'
 import ON from './Footer_img/on.png'
 import ITAJunior from './Footer_img/ITAJunior.png'
 
+
+
+
+
 const pages = PAGES.NAMES;
 const links = PAGES.LINKS;
 
