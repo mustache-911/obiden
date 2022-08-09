@@ -1,14 +1,29 @@
-import * as React from 'react'
-import { useNavigate } from 'react-router-dom'
-import { Box, Stack } from '@mui/material'
-import { Instagram, Facebook, Twitter } from '@mui/icons-material'
-import Typography from '@mui/material/Typography'
-import Container from '@mui/material/Container'
-import MCTI from './Footer_img/logo_mcti_horizontal_cor_negativa.png'
+import * as React from 'react';
+import { useContext } from 'react';
+import { ColorContext } from '../../context/color';
+import { LanguageContext } from '../../context/language'
+import { useNavigate } from 'react-router-dom';
+import { Box, Stack } from '@mui/material';
+import { PAGES } from '../../constants/pages'
+import { Instagram, Facebook, LinkedIn, Twitter } from '@mui/icons-material'
+import AndroidIcon from '@mui/icons-material/Android';
+import AppleIcon from '@mui/icons-material/Apple';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import MCTI from './Footer_img/MCTI.png'
 import ON from './Footer_img/on.png'
 import ITAJunior from './Footer_img/ITAJunior.png'
+
+const pages = PAGES.NAMES;
+const links = PAGES.LINKS;
+
 const ResponsiveToolBar = () => {
-    const navigate = useNavigate()
+  const { mainColor } = useContext(ColorContext)
+  const { language, setLanguage } = useContext(LanguageContext)
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
+
 
     return (
         <Box style={{ background: '#002443' }}>
@@ -224,8 +239,8 @@ const ResponsiveToolBar = () => {
                     </Stack>
 
                     <Stack direction="row" alignItems="flex-start" spacing={3}>
-                        <Instagram
-                            onClick={() => navigate('/')}
+                        <AndroidIcon
+                            onClick={() => navigate('https://play.google.com/store/apps/details?id=br.com.fractaltecnologia.mncti&hl=pt')}
                             sx={[
                                 { color: 'white', fontSize: '2.5rem' },
                                 {
@@ -237,8 +252,8 @@ const ResponsiveToolBar = () => {
                                 }
                             ]}
                         />
-                        <Facebook
-                            onClick={() => navigate('/')}
+                        <AppleIcon
+                            onClick={() => navigate('https://apps.apple.com/br/app/olimp%C3%ADada-m%C3%AAs-da-ci%C3%AAncia-e-tec/id1536011249')}
                             sx={[
                                 { color: 'white', fontSize: '2.5rem' },
                                 {
@@ -250,6 +265,7 @@ const ResponsiveToolBar = () => {
                                 }
                             ]}
                         />
+
 
                         <Twitter
                             onClick={() => navigate('/')}
@@ -272,7 +288,7 @@ const ResponsiveToolBar = () => {
                             display: { xs: 'block', md: 'flex' }
                         }}
                     >
-                        <Box
+                        <Box 
                             alignItems="center"
                             justifyContent="center"
                             textAlign="center"
