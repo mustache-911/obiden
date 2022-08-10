@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useContext } from 'react';
-import { ColorContext } from '../../context/color';
+import { ColorContext } from '../../context/color'; 
 import { LanguageContext } from '../../context/language'
 import { useNavigate } from 'react-router-dom';
 import { Box, Stack } from '@mui/material';
@@ -13,6 +13,8 @@ import Container from '@mui/material/Container';
 import MCTI from './Footer_img/MCTI.png'
 import ON from './Footer_img/on.png'
 import ITAJunior from './Footer_img/ITAJunior.png'
+import Fractal from './Footer_img/Logo_fractal.png'
+import Mktjr from './Footer_img/Logo_mktjr.png'
 
 
 
@@ -240,11 +242,98 @@ const ResponsiveToolBar = () => {
                                 )
                             }
                         />
+
+                        
+                        
                     </Stack>
 
+                <Box
+                
+                sx={{
+                    height: '100%',
+                    width: '100%',
+                    
+                }}
+                alignItems="center"
+                justifyContent="center"
+                >
+                    <Stack
+                        flexWrap={'wrap'}
+                        direction="row"
+                        alignItems="center"
+                        justifyContent="center"
+                        
+                    >
+                        <Box
+                            sx={{
+                                height: '100%',
+                                width: '100%',
+                                maxHeight: { xs: 233, md: 30 },
+                                maxWidth: { xs: 250, md: 100 }
+                            }}
+                            alignItems="center"
+                            justifyContent="center"
+                        >
+                            <Typography
+                                noWrap
+                                alignItems="center"
+                                justifyContent="center"
+                                textAlign="center"
+                                sx={{
+                                    color: '#fff',
+                                    display: { xs: 'block', md: 'flex' },
+                                    fontFamily: 'montserrat',
+                                    fontWeight: 400,
+                                    fontSize: '13px',
+                                    textDecoration: 'none'
+                                }}
+                            >
+                                Apoiadores:
+                            </Typography>
+                        </Box>
+    
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                maxHeight: { xs: 233, md: 200 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="Logo FRACTAL"
+                            src={Fractal}
+                            
+                        />
+                        
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="Logo mktjr"
+                            src={Mktjr}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.marketingjr.com.br/'
+                                    )
+                                )
+                            }
+                        />
+                        
+                    </Stack>
+                </Box>
                     <Stack direction="row" alignItems="flex-start" spacing={3}>
                         <AndroidIcon
-                            onClick={() => navigate('https://play.google.com/store/apps/details?id=br.com.fractaltecnologia.mncti&hl=pt')}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://play.google.com/store/apps/details?id=br.com.fractaltecnologia.mncti&hl=pt'
+                                    )
+                                )
+                            }
                             sx={[
                                 { color: 'white', fontSize: '2.5rem' },
                                 {
@@ -257,7 +346,13 @@ const ResponsiveToolBar = () => {
                             ]}
                         />
                         <AppleIcon
-                            onClick={() => navigate('https://apps.apple.com/br/app/olimp%C3%ADada-m%C3%AAs-da-ci%C3%AAncia-e-tec/id1536011249')}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://apps.apple.com/br/app/olimp%C3%ADada-m%C3%AAs-da-ci%C3%AAncia-e-tec/id1536011249'
+                                    )
+                                )
+                            }
                             sx={[
                                 { color: 'white', fontSize: '2.5rem' },
                                 {
@@ -271,19 +366,7 @@ const ResponsiveToolBar = () => {
                         />
 
 
-                        <Twitter
-                            onClick={() => navigate('/')}
-                            sx={[
-                                { color: 'white', fontSize: '2.5rem' },
-                                {
-                                    '&:hover': {
-                                        color: 'black',
-                                        cursor: 'pointer',
-                                        transition: '0.3s'
-                                    }
-                                }
-                            ]}
-                        />
+                    
                     </Stack>
                     <Box
                         alignItems="center"
