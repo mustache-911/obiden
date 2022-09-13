@@ -33,6 +33,7 @@ const Home = () => {
                     Inscreva-se na Olimpíada do Bicentenário da Independência do
                     Brasil
                 </p>
+
                 <button 
                 className={styles.btn}
                 onClick={() =>
@@ -45,6 +46,7 @@ const Home = () => {
                 >
                     
                     <p>INSCREVA-SE</p>
+
                 </button>
             </Box>
 
@@ -317,7 +319,9 @@ const Home = () => {
                             className={styles.btn}
                             target="_blank"
                             rel="noreferrer"
-                            
+
+                            href = "https://fractalid.fractaltecnologia.com.br/signup?app_id=32&url_redirect=https%3A%2F%2Fapp.mncti.com.br%2F"
+
                         >
                             Inscreva-se
                         </a>

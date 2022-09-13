@@ -1,13 +1,17 @@
 import * as React from 'react';
 import { useContext } from 'react';
+
 import { ColorContext } from '../../context/color'; 
+
 import { LanguageContext } from '../../context/language'
 import { useNavigate } from 'react-router-dom';
 import { Box, Stack } from '@mui/material';
 import { PAGES } from '../../constants/pages'
 import { Instagram, Facebook, LinkedIn, Twitter } from '@mui/icons-material'
+
 import AndroidIcon from '@mui/icons-material/Android';
 import AppleIcon from '@mui/icons-material/Apple';
+
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import MCTI from './Footer_img/MCTI.png'
@@ -247,6 +251,7 @@ const ResponsiveToolBar = () => {
                         
                     </Stack>
 
+
                 <Box
                 
                 sx={{
@@ -386,32 +391,99 @@ const ResponsiveToolBar = () => {
                                 sx={{
                                     marginRight: '2pt',
 
-                                    color: 'white'
-                                }}
-                            >
-                                © 2022 Olimpíada da Independência.
-                            </Typography>
-                        </Box>
-                        <Box
-                            alignItems="center"
-                            justifyContent="center"
-                            textAlign="center"
-                        >
-                            <Typography
-                                variant="p"
-                                noWrap
-                                textAlign="right"
-                                sx={{
-                                    color: 'white'
-                                }}
-                            >
-                                All rights reserved.
-                            </Typography>
-                        </Box>
-                    </Box>
-                </Stack>
-            </Container>
-        </Box>
-    )
-}
-export default ResponsiveToolBar
+
+              <Box
+              component="img"
+              sx={{
+                  margin: 2,
+                  cursor: 'pointer',
+                  height: '80%',
+                  width: '80%',
+                  maxHeight: { xs: 233, md: 200 },
+                  maxWidth: { xs: 250, md: 120 }
+              }}
+              alt="MCTI"
+              src={MCTI}
+              onClick={() =>
+                  navigate(
+                      window.location.replace(
+                          'https://www.gov.br/mcti/pt-br'
+                      )
+                  )
+              }
+          />
+             <Box
+              
+              component="img"
+              
+              sx={{
+                margin:2,
+                maxHeight: { xs: 203, md: 100 },
+                maxWidth: { xs: 230, md: 210 },
+              }}
+              alt="Logo ITA Junior"
+              src={ITAJunior}
+            />
+          
+          </Stack>
+            
+          
+          <Stack direction="row" alignItems="flex-start" spacing={3}>
+            <Instagram onClick={()=>navigate('/')} sx={[{color: 'white', fontSize: '2.5rem'},
+                            {'&:hover': {color:'black', cursor:'pointer', transition:'0.3s' }}]}/>
+            <Facebook onClick={()=>navigate('/')} sx={[{color: 'white', fontSize: '2.5rem'},
+                            {'&:hover': {color:'black', cursor:'pointer', transition:'0.3s' }}]}/>
+            <LinkedIn onClick={()=>navigate('/')} sx={[{color: 'white', fontSize: '2.5rem'},
+                            {'&:hover': {color:'black', cursor:'pointer', transition:'0.3s' }}]}/>
+            <Twitter  onClick={()=>navigate('/')}sx={[{color: 'white', fontSize: '2.5rem'},
+                            {'&:hover': {color:'black', cursor:'pointer', transition:'0.3s'}}]}/>
+          </Stack>
+          <Box 
+            alignItems="center"
+            justifyContent="center"
+            sx={{
+              display: {xs:'block',md:'flex'},
+             
+           }}
+            
+          >
+           <Box 
+              alignItems="center"
+              justifyContent="center"
+              textAlign="center" 
+              >
+          <Typography
+              variant="p"
+              noWrap
+              sx={{
+                marginRight:'2pt',
+               
+                color: 'white',
+              }}
+            >
+              © 2022 Olimpíada da Independência.
+            </Typography>
+            </Box>
+            <Box 
+              alignItems="center"
+              justifyContent="center"
+              textAlign="center" 
+              >
+            <Typography
+              variant="p"
+              noWrap
+              textAlign="right" 
+              sx={{
+                color: 'white',
+              }}
+            >
+              All rights reserved.
+            </Typography>
+            </Box>
+            </Box>
+        </Stack>
+      </Container>
+    </Box>
+  );
+};
+export default ResponsiveToolBar;

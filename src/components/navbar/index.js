@@ -18,8 +18,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import Logo from './Olimpiadas_Bicentenário.png'
+import Logomarca from './Logo Olimpiada Bicentenario - colorida.png'
 import PeopleIcon from '@mui/icons-material/People';
 import {Stack} from '@mui/material';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
@@ -27,7 +26,8 @@ import { grey } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import CategoryIcon from '@mui/icons-material/Category';
-import { getTabScrollButtonUtilityClass } from '@mui/material';
+import LoginIcon from '@mui/icons-material/Login';
+
 
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(grey[900]),
@@ -126,8 +126,15 @@ const ResponsiveAppBar = () => {
       
             <Box spacing={1} sx={{ display: { xs: 'none', md: 'block' } }}>
             <Stack direction="row" alignItems="right" justifyContent="right" spacing={3}  >
-            <ColorButton variant="contained" href='/aboutus' startIcon={<PeopleIcon/>} disableRipple>
-             Sobre
+
+            <a href="https://app.olimpiadabrasil.org/">
+            <ColorButton variant="contained" startIcon={<LoginIcon/>} disableRipple>
+             Login
+            </ColorButton>
+            </a>
+            <ColorButton variant="contained" onClick={() => document.getElementById('sobre').scrollIntoView({block: "center", behavior: "smooth"})} startIcon={<PeopleIcon/>} disableRipple>
+             O que é?
+
             </ColorButton>
             <ColorButton variant="contained" href='#categorias' startIcon={<CategoryIcon/>} disableRipple>
              Categorias
