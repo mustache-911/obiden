@@ -44,11 +44,11 @@ const Home = () => {
                         <span style={{ color: '#01873B' }}>INDEPENDÊNCIA</span>
                     </h3>
                     <p>
-                    Em 2022 comemoramos o bicentenário de nossa Independência. 
+                    Em 2022 celebramos o bicentenário de nossa Independência. 
                     Como parte das comemorações deste bicentenário, o governo federal está promovento uma Olimpíada totalmente aberta e gratuita. 
                     Através de provas instigantes, queremos provocar uma reflexão não só sobre a importância da Independência em si, mas também 
-                    sobre todos os seus desdobramentos num espectro mais amplo que o histórico. Assim, as questões da Olimpíada abrangerão de Artes 
-                    à Ciências: Literatura, Pintura, Matemática, História, Geografia, Geopolítica, Música, etc.
+                    sobre todos os seus desdobramentos num espectro mais amplo que o histórico. Assim, as questões da Olimpíada abrangerão vários temas
+                    transversais: Literatura, Pintura, Matemática, História, Geografia, Geopolítica, Música, etc.
                     </p>
                 </Card>
             </Box>
@@ -68,7 +68,7 @@ const Home = () => {
                 {/* Gratuito */}
                 <Box className={`${styles.flexBox} ${styles.freeCost}`}>
                     <Card className={styles.rulesCard}>
-                        <p>A Olimpíada do Bicentenário da Independência do Brasil é <span>totalmente gratuita</span> para qualquer estudante ou cidadão do Brasil.</p>
+                        <p>A Olimpíada do Bicentenário da Independência do Brasil é <span>totalmente gratuita</span> para qualquer estudante.</p>
                     </Card>
                     <img alt="" src="../../../Home/nomoney.png" sx={{ m: 2 }} className={styles.iconCard}/>
                 </Box>
@@ -84,7 +84,7 @@ const Home = () => {
                 {/* Categorias */}
                 <Box className={`${styles.flexBox} ${styles.rulesCategories}`} sx={{ width: 1}}>
                     <Card sx={{p: 5}} className={styles.rulesCard}>
-                        <p>Há <span>3 categorias</span> na Olimpíada: <span>Júnior</span> (estudantes do Ensino Fundamental), <span>Sênior</span> (Estudantes do Ensino Médio) e <span>Aberta</span> (qualquer outro cidadão, inclusive o vô e a vó!).</p>
+                        <p>Há <span>2 categorias</span> na Olimpíada: <span>Júnior</span> (estudantes do Ensino Fundamental) e <span>Sênior</span> (Estudantes do Ensino Médio, Ensino Técnico ou EJA).</p>
                         <Box className={styles.flexBox}>
                             <Box className={styles.rulesCategories}>
                                 <img alt="" src="../../../Home/student.png" sx={{ m: 1 }} className={styles.iconCard}/>
@@ -93,10 +93,6 @@ const Home = () => {
                             <Box className={styles.rulesCategories}>
                                 <img alt="" src="../../../Home/cllgstudent.png" sx={{ m: 1 }} className={styles.iconCard}/>
                                 <h3>Sênior</h3>
-                            </Box>
-                            <Box className={styles.rulesCategories}>
-                                <img alt="" src="../../../Home/family.png" sx={{ m: 1 }} className={styles.iconCard}/>
-                                <h3>Aberta</h3>
                             </Box>
                         </Box>
                     </Card>
@@ -120,7 +116,7 @@ const Home = () => {
                             <Box className={styles.linkFase} onClick={() => document.getElementById('fase04').scrollIntoView({block: "center", behavior: "smooth"})}>
                                 <img alt="" src="../../../Home/congresso-nacional-do-brasil.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
                                 <h3>Fase 4</h3>
-                                <p>Ocorrerá em Brasília e serão proporcionados transporte e hospedagem aos candidatos e responsáveis, caso necessário.</p>
+                                <p>Ocorrerá em Brasília e serão proporcionados transporte e hospedagem aos estudantes e seus responsáveis, caso necessário.</p>
                             </Box>
                         </Box>
                     </Card>
@@ -148,9 +144,9 @@ const Home = () => {
                     <h2>JORNADA INDEPENDÊNCIA</h2>
                     <p>
                         A Olimpíada abrange quatro fases: na primeira e na
-                        sefunda, uma prova objetiva sobre; na terceira, uma
-                        prova com questões objetivas e discursivas; e na quarta
-                        o formata será divulgado posteriormente
+                        segunda, uma prova objetiva online; na terceira, uma
+                        prova objetiva e presencial; e na quarta,
+                        o formato será divulgado posteriormente
                     </p>
                 </Box>
 
@@ -215,8 +211,8 @@ const Home = () => {
                                         computador, notebook, tablet ou celular.
                                         A prova pode ser feita em casa, na
                                         escola, ou em qualquer lugar com acesso
-                                        à internet. A primeira fase é uma prova
-                                        objetiva (múltipla escolha) com consulta
+                                        à internet. A segunda fase é uma prova
+                                        objetiva (múltipla escolha) SEM consulta
                                         a livros e à internet.
                                     </p>
                                 </div>
@@ -245,9 +241,8 @@ const Home = () => {
                                 <h3>FASE 03</h3>
                                 <div className={styles.timelineInformation}>
                                     <p>
-                                        A terceira fase é uma prova híbrida, com
-                                        questões objetivas e discursivas
-                                        diferentes para cada uma das categorias
+                                        A terceira fase é uma prova com
+                                        questões objetivas
                                         e só poderá ser realizada sob a
                                         supervisão de um ou mais professores
                                         oficialmente designados pela COOBINDEN.
