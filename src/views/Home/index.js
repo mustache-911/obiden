@@ -1,5 +1,4 @@
 import styles from './home.module.css'
-import { useNavigate } from 'react-router-dom';
 import { Box, Stack, Card } from '@mui/material'
 import {
     Timeline,
@@ -14,9 +13,6 @@ import pdf from './regulation.pdf'
 import CategoryCard from '../../components/categoriaCard'
 
 const Home = () => {
-
-    const navigate = useNavigate();
-
 
     return (
         <Stack
@@ -33,20 +29,8 @@ const Home = () => {
                     Inscreva-se na Olimpíada do Bicentenário da Independência do
                     Brasil
                 </p>
-
-                <button 
-                className={styles.btn}
-                onClick={() =>
-                    navigate(
-                        window.location.replace(
-                            'https://fractalid.fractaltecnologia.com.br/signup?app_id=32&url_redirect=https%3A%2F%2Fapp.mncti.com.br%2F'
-                        )
-                    )
-                }
-                >
-                    
-                    <p>INSCREVA-SE</p>
-
+                <button className={styles.btn}>
+                    <a href="https://fractalid.fractaltecnologia.com.br/signup?app_id=32&url_redirect=https%3A%2F%2Fapp.mncti.com.br%2F">INSCREVA-SE</a>
                 </button>
             </Box>
 
@@ -319,9 +303,7 @@ const Home = () => {
                             className={styles.btn}
                             target="_blank"
                             rel="noreferrer"
-
                             href = "https://fractalid.fractaltecnologia.com.br/signup?app_id=32&url_redirect=https%3A%2F%2Fapp.mncti.com.br%2F"
-
                         >
                             Inscreva-se
                         </a>

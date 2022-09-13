@@ -1,10 +1,6 @@
 import * as React from 'react';
-import Home from '../../views/Home/index'
 import { Outlet, useNavigate } from 'react-router-dom';
 import ResponsiveToolBar from '../footer'
-import { useContext } from 'react';
-import { ColorContext } from '../../context/color';
-import { LanguageContext } from '../../context/language'
 import { PAGES } from '../../constants/pages'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -14,14 +10,11 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Logomarca from './Logo Olimpiada Bicentenario - colorida.png'
 import PeopleIcon from '@mui/icons-material/People';
 import {Stack} from '@mui/material';
-import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import { grey } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
@@ -40,28 +33,17 @@ const ColorButton = styled(Button)(({ theme }) => ({
 
 const pages = PAGES.NAMES;
 const links = PAGES.LINKS;
-const settings = ['Profile', 'Account', 'Logout'];
 
 const ResponsiveAppBar = () => {
-  const { mainColor } = useContext(ColorContext)
-  const { language, setLanguage } = useContext(LanguageContext)
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate()
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -82,7 +64,7 @@ const ResponsiveAppBar = () => {
               }}
               onClick={()=>navigate('./')}
               alt="Logo Olimpiada da Independência"
-              src={Logo}
+              src={Logomarca}
              
             />
           <Stack direction="row" alignItems="right" justifyContent="right" spacing={4}  sx={{py: 4, width:'80%'}}>
@@ -117,16 +99,17 @@ const ResponsiveAppBar = () => {
               >
                 {/* Menu for mobile */}
                 {pages.map((page, index) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center" href={links[index]}>{page}</Typography>
-                  </MenuItem>
+                   <a href={links[index]} style ={{textDecoration: 'none', color: "#000"}}>
+                    <MenuItem key={page} onClick={handleCloseNavMenu}>
+                      <Typography textAlign="center">{page}</Typography>
+                    </MenuItem>
+                  </a>
                 ))}
               </Menu>
             </Box>
       
-            <Box spacing={1} sx={{ display: { xs: 'none', md: 'block' } }}>
+            <Box spacing sx={{ display: { xs: 'none', md: 'block' } }}>
             <Stack direction="row" alignItems="right" justifyContent="right" spacing={3}  >
-
             <a href="https://app.olimpiadabrasil.org/">
             <ColorButton variant="contained" startIcon={<LoginIcon/>} disableRipple>
              Login
@@ -134,16 +117,12 @@ const ResponsiveAppBar = () => {
             </a>
             <ColorButton variant="contained" onClick={() => document.getElementById('sobre').scrollIntoView({block: "center", behavior: "smooth"})} startIcon={<PeopleIcon/>} disableRipple>
              O que é?
-
             </ColorButton>
-            <ColorButton variant="contained" href='#categorias' startIcon={<CategoryIcon/>} disableRipple>
-             Categorias
+            <ColorButton variant="contained" onClick={() => document.getElementById('categorias').scrollIntoView({block: "center", behavior: "smooth"})} startIcon={<CategoryIcon/>} disableRipple>
+             Quem pode participar?
             </ColorButton>
-            <ColorButton variant="contained" href='/regulamento' startIcon={<AutoStoriesIcon/>} disableRipple>
+            <ColorButton variant="contained" onClick={() => document.getElementById('regulamento').scrollIntoView({block: "start", behavior: "smooth"})} startIcon={<AutoStoriesIcon/>} disableRipple>
              Regulamento
-            </ColorButton>
-            <ColorButton variant="contained" href='https://app.olimpiadabrasil.org/' startIcon={<AccountCircleOutlinedIcon/>} disableRipple>
-             Login
             </ColorButton>
             </Stack>
             </Box>
