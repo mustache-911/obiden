@@ -54,15 +54,11 @@ const CategoryCard = () => {
     const categorias = [
         {
             nome: 'Júnior',
-            texto: 'Categoria destinada aos alunos do 8º e 9º anos do Ensino Fundamental'
-        },
-        {
-            nome: 'Livre',
-            texto: 'Categoria destinada a qualquer pessoa,sendo independente de idade e formação acadêmica'
-        },
+            texto: 'Categoria destinada aos alunos do 6º, 7º, 8º e 9º anos do Ensino Fundamental'
+        },   
         {
             nome: 'Sênior',
-            texto: 'Categoria destinada aos alunos do ensino médio'
+            texto: 'Categoria destinada aos alunos do ensino médio, ensino técnico ou EJA'
         }
     ]
     return (
@@ -84,7 +80,7 @@ const CategoryCard = () => {
                         <br />
                     </h1>
                     <p className={classes.p}>
-                        A Olimpíada da Independência será dividida em três
+                        A Olimpíada da Independência será dividida em duas
                         categorias
                     </p>
                 </Container>
@@ -137,30 +133,7 @@ const CategoryCard = () => {
                             {categorias[1].texto}
                         </p>
                     </Card>
-                    <Card
-                        className={responsive.Card}
-                        sx={{
-                            minHeight: '20rem',
-                            maxWidth: '33vw',
-                            margin: '1rem',
-                            backgrouColor: '#F2F2F2',
-                            padding: '1rem 2rem',
-                            borderRadius: '1rem'
-                        }}
-                    >
-                        <h3 className={classes.root}>{categorias[2].nome}</h3>
-                        <p
-                            className={classes.root2}
-                            sx={{
-                                marginTop: '6rem',
-                                marginBottom: '2rem',
-                                marginX: '2rem 0rem',
-                                width: '20rem'
-                            }}
-                        >
-                            {categorias[2].texto}
-                        </p>
-                    </Card>
+               
                 </div>
                 {/* <Container sx={{ marginBottom: "4rem" }}>
                     <Button className={responsive.Button}><p className={classes.buttonText}>INSCREVA-SE</p></Button>
