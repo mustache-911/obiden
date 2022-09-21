@@ -5,17 +5,31 @@ import { LanguageContext } from '../../context/language'
 import { useNavigate } from 'react-router-dom';
 import { Box, Stack } from '@mui/material';
 import { PAGES } from '../../constants/pages'
+import Divider from '@mui/material/Divider';
 import { Instagram, Facebook, LinkedIn, Twitter } from '@mui/icons-material'
 import AndroidIcon from '@mui/icons-material/Android';
 import AppleIcon from '@mui/icons-material/Apple';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import MCTI from './Footer_img/MCTI.png'
-import ON from './Footer_img/on.png'
+import MCTI from './Footer_img/mcti_logo.png'
 import ITAJunior from './Footer_img/ITAJunior.png'
 import Fractal from './Footer_img/Logo_fractal.png'
 import Mktjr from './Footer_img/Logo_mktjr.png'
-
+import Ufms from './Footer_img/ufms_logo_1.png'
+import Turismo from './Footer_img/logoministerioturismo.png'
+import Cultura from './Footer_img/logo_secretaria_especial_da_cultura.png'
+import MEC from './Footer_img/MEC_BANDEIRA_LETRA_POSITIVA.png'
+import Camara from './Footer_img/camara_logo.png'
+import OBA from './Footer_img/OBA_logo.png'
+import UFRN from './Footer_img/UFRN_logo.png'
+import UFVJM from './Footer_img/UFVJM_logo.png'
+import OBB from './Footer_img/obb_logo.png'
+import OBL from './Footer_img/obl_logo.png'
+import OBR from './Footer_img/obr_logo.png'
+import OBI from './Footer_img/obi_logo.png'
+import SBC from './Footer_img/SBC_logo.png'
+import Unicamp from './Footer_img/unicamp_logo.png'
+import Unesco from './Footer_img/unesco_logo.png'
 
 
 
@@ -42,7 +56,6 @@ const ResponsiveToolBar = () => {
                     sx={{ py: 4 }}
                 >
                     <Stack
-                        flexWrap={'wrap'}
                         direction="row"
                         alignItems="center"
                         justifyContent="center"
@@ -62,6 +75,7 @@ const ResponsiveToolBar = () => {
                                 alignItems="center"
                                 justifyContent="center"
                                 textAlign="center"
+                                spacing ={3}
                                 sx={{
                                     color: '#fff',
                                     display: { xs: 'block', md: 'flex' },
@@ -71,25 +85,26 @@ const ResponsiveToolBar = () => {
                                     textDecoration: 'none'
                                 }}
                             >
-                                Realização:
+                                Organização:
                             </Typography>
                         </Box>
                         <Box
                             component="img"
                             sx={{
-                                marginRight: '5px',
+                                marginLeft: '15px',
+                                marginRight: '15px',
                                 cursor: 'pointer',
-                                height: '100%',
-                                width: '100%',
-                                maxHeight: { xs: 233, md: 167 },
-                                maxWidth: { xs: 250, md: 150 }
+                                height: '50%',
+                                width: '50%',
+                                maxHeight: { xs: 75, md: 75 },
+                                maxWidth: { xs: 75, md: 75 }
                             }}
-                            alt="Logo Observatório Nacional"
-                            src={ON}
+                            alt="UFMS"
+                            src={Ufms}
                             onClick={() =>
                                 navigate(
                                     window.location.replace(
-                                        'https://www.gov.br/observatorio/pt-br'
+                                        'https://www.ufms.br/'
                                     )
                                 )
                             }
@@ -136,13 +151,13 @@ const ResponsiveToolBar = () => {
                                     letterSpacing: '0px',
                                     fontFamily: 'Signika, sans-serif;',
                                     fontSize: '8pt',
-                                    fontWeight: 'SemiBold',
+                                    fontWeight: 'Bold',
                                     marginRight: '5pt'
                                 }}
                                 onClick={() =>
                                     navigate(
                                         window.location.replace(
-                                            'https://dados.gov.br/organization/about/secretariaespecialdacultura'
+                                            'https://www.gov.br/turismo/pt-br'
                                         )
                                     )
                                 }
@@ -150,59 +165,7 @@ const ResponsiveToolBar = () => {
                             CULTURA    
                             </Typography>
                         </Box>
-                        <Box>
-                            <Typography
-                                noWrap
-                                alignItems="right"
-                                justifyContent="right"
-                                textAlign="right"
-                                sx={{
-                                    my: -0.5,
-                                    cursor: 'pointer',
-                                    color: '#fff',
-                                    letterSpacing: '0px',
-                                    display: { xs: 'block', md: 'flex' },
-                                    fontWeight: 'light',
-                                    fontFamily: 'Signika, sans-serif;',
-                                    fontSize: '9pt',
-                                    textDecoration: 'none'
-                                }}
-                                onClick={() =>
-                                    navigate(
-                                        window.location.replace(
-                                            'https://www.gov.br/turismo/pt-br'
-                                        )
-                                    )
-                                }
-                            >
-                                MINISTÉRIO DO
-                            </Typography>
-                            <Typography
-                                noWrap
-                                alignItems="right"
-                                justifyContent="right"
-                                textAlign="right"
-                                sx={{
-                                    cursor: 'pointer',
-                                    letterSpacing: '0px',
-                                    color: '#fff',
-                                    display: { xs: 'block', md: 'flex' },
-                                    fontFamily: 'Signika, sans-serif;',
-                                    fontSize: '8pt',
-                                    fontWeight: 'SemiBold',
-                                    textDecoration: 'none'
-                                }}
-                                onClick={() =>
-                                    navigate(
-                                        window.location.replace(
-                                            'https://www.gov.br/turismo/pt-br'
-                                        )
-                                    )
-                                }
-                            >
-                                TURISMO
-                            </Typography>
-                        </Box>
+                        
 
                         <Box
                             component="img"
@@ -214,6 +177,27 @@ const ResponsiveToolBar = () => {
                                 maxHeight: { xs: 233, md: 200 },
                                 maxWidth: { xs: 250, md: 120 }
                             }}
+                            alt="Turismo"
+                            src={Turismo}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.gov.br/turismo/pt-br'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                height: '100%',
+                                width: '80%',
+                                maxHeight: { xs: 250, md: 250 },
+                                maxWidth: { xs: 300, md: 220 }
+                            }}
                             alt="MCTI"
                             src={MCTI}
                             onClick={() =>
@@ -224,8 +208,7 @@ const ResponsiveToolBar = () => {
                                 )
                             }
                         />
-                        
-                        
+   
                     </Stack>
 
                 <Box
@@ -269,10 +252,86 @@ const ResponsiveToolBar = () => {
                                     textDecoration: 'none'
                                 }}
                             >
-                                Apoiadores:
+                                Apoio:
                             </Typography>
                         </Box>
     
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 170 }
+                            }}
+                            alt="Camara dos deputados"
+                            src={Camara}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.camara.leg.br/'
+                                    )
+                                )
+                            }
+                        />
+
+            
+                        
+                    </Stack>
+                    <Stack
+                        flexWrap={'wrap'}
+                        direction="row"
+                        alignItems="center"
+                        justifyContent="center"
+                        
+                    >
+                        <Box
+                            sx={{
+                                height: '100%',
+                                width: '100%',
+                                maxHeight: { xs: 233, md: 30 },
+                                maxWidth: { xs: 250, md: 100 }
+                            }}
+                            alignItems="center"
+                            justifyContent="center"
+                        >
+                            <Typography
+                                noWrap
+                                alignItems="center"
+                                justifyContent="center"
+                                textAlign="center"
+                                sx={{
+                                    color: '#fff',
+                                    display: { xs: 'block', md: 'flex' },
+                                    fontFamily: 'montserrat',
+                                    fontWeight: 400,
+                                    fontSize: '13px',
+                                    textDecoration: 'none'
+                                }}
+                            >
+                                Parceria:
+                            </Typography>
+                        </Box>
+    
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 170 }
+                            }}
+                            alt="Unesco"
+                            src={Unesco}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://pt.unesco.org/fieldoffice/brasilia'
+                                    )
+                                )
+                            }
+                        />
+
                         <Box
                             component="img"
                             sx={{
@@ -296,12 +355,37 @@ const ResponsiveToolBar = () => {
                             component="img"
                             sx={{
                                 margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="UFRN"
+                            src={UFRN}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://ufrn.br/'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
                                 maxHeight: { xs: 233, md: 200 },
                                 maxWidth: { xs: 230, md: 200 }
                             }}
                             alt="Logo FRACTAL"
                             src={Fractal}
-                            
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://fractaltecnologia.com.br/'
+                                    )
+                                )
+                            }
                         />
                         
                         <Box
@@ -322,6 +406,160 @@ const ResponsiveToolBar = () => {
                                 )
                             }
                         />
+
+                        
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="UFVJM"
+                            src={UFVJM}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'http://portal.ufvjm.edu.br/'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="OBBiotec"
+                            src={OBB}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.obbiotec.com.br/'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="OBL"
+                            src={OBL}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://obling.org/'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="OBR"
+                            src={OBR}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.obr.org.br/'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="OBA"
+                            src={OBA}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'http://www.oba.org.br/site/'
+                                    )
+                                )
+                            }
+                        />
+                        
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="OBI"
+                            src={OBI}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://olimpiada.ic.unicamp.br/'
+                                    )
+                                )
+                            }
+                        />
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="SBC"
+                            src={SBC}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.sbc.org.br/'
+                                    )
+                                )
+                            }
+                        />
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="Unicamp"
+                            src={Unicamp}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.unicamp.br/unicamp/'
+                                    )
+                                )
+                            }
+                        />
+
+
+
                         
                     </Stack>
                 </Box>
@@ -367,6 +605,30 @@ const ResponsiveToolBar = () => {
 
 
                     
+                    </Stack>
+                    
+                    <Typography
+                                noWrap
+                                alignItems="center"
+                                justifyContent="center"
+                                textAlign="center"
+                                sx={{
+                                    color: '#fff',
+                                    display: { xs: 'block', md: 'flex' },
+                                    fontFamily: 'montserrat',
+                                    fontWeight: 400,
+                                    fontSize: '13px',
+                                    textDecoration: 'none'
+                                }}
+                            >
+                                Instagram:
+                            </Typography>
+
+                    <Stack direction="row" alignItems="flex-start" spacing={3}>
+                        <Instagram onClick={()=>navigate(window.location.replace(
+                                        'https://instagram.com/olimpiadabicentenario'
+                                    ))} sx={[{color: 'white', fontSize: '2.5rem'},
+                                        {'&:hover': {color:'black', cursor:'pointer', transition:'0.3s' }}]}/>
                     </Stack>
                     <Box
                         alignItems="center"

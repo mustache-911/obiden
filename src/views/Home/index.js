@@ -9,7 +9,7 @@ import {
     TimelineContent,
     TimelineOppositeContent
 } from '@mui/lab'
-import pdf from './regulation.pdf'
+import pdf from './regulamento_olimpiada.pdf'
 import CategoryCard from '../../components/categoriaCard'
 
 const Home = () => {
@@ -153,7 +153,7 @@ const Home = () => {
                 <Timeline position="alternate" className={styles.timeline}>
                     <TimelineItem>
                         <TimelineOppositeContent sx={{ m: 'auto 0' }}>
-                            <p>3 a 10 de julho</p>
+                            <p>1 a 9 de outubro</p>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
@@ -182,14 +182,14 @@ const Home = () => {
                                 </div>
                                 <h4>Divulgação dos resultados:</h4>
                                 <br />
-                                <h4>até 17 de julho</h4>
+                                <h4>10 de outubro</h4>
                             </Card>
                         </TimelineContent>
                     </TimelineItem>
 
                     <TimelineItem>
                         <TimelineOppositeContent sx={{ m: 'auto 0' }}>
-                            <p>31 de julho a 7 de agosto</p>
+                            <p>20 a 27 de outubro</p>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
@@ -218,14 +218,14 @@ const Home = () => {
                                 </div>
                                 <h4>Divulgação dos resultados:</h4>
                                 <br />
-                                <h4>até 24 de agosto</h4>
+                                <h4>28 de outubro</h4>
                             </Card>
                         </TimelineContent>
                     </TimelineItem>
 
                     <TimelineItem>
                         <TimelineOppositeContent sx={{ m: 'auto 0' }}>
-                            <p>28 de agosto</p>
+                            <p>9 de novembro</p>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
@@ -256,14 +256,14 @@ const Home = () => {
                                 </div>
                                 <h4>Divulgação dos resultados:</h4>
                                 <br />
-                                <h4>até 14 de setembro</h4>
+                                <h4>10 de novembro</h4>
                             </Card>
                         </TimelineContent>
                     </TimelineItem>
 
                     <TimelineItem>
                         <TimelineOppositeContent sx={{ m: 'auto 0' }}>
-                            <p>12 de outubro</p>
+                            <p>1 de dezembro</p>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
