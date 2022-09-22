@@ -187,7 +187,7 @@ const ResponsiveToolBar = () => {
                                 )
                             }
                         />
-
+!
                         <Box
                             component="img"
                             sx={{
