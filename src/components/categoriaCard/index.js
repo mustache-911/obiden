@@ -10,13 +10,17 @@ const useStyles = makeStyles({
     root: {
         color: '#002443',
         fontFamily: "'Montserrat', sans-serif",
-        fontSize: 'clamp(5px,4vw,50px)'
+
+        fontSize: 'clamp(25px,4vw,50px)'
+
     },
     root2: {
         color: '#212121',
         fontWeight: '-moz-initial',
         fontFamily: "'Montserrat', sans-serif;",
-        fontSize: 'clamp(20px,1.2vw,80px)',
+
+        fontSize: 'clamp(13px,3.5vw,15px)',
+
         marginTop: '2rem'
     },
     p: {
@@ -88,8 +92,10 @@ const CategoryCard = () => {
                     <Card
                         className={`${responsive.Card}`}
                         sx={{
-                            minHeight: '20rem',
-                            maxWidth: '33vw',
+
+                            minHeight: 'clamp(80px,33vw,320px)',
+                            maxWidth: '90vw',
+
                             margin: '1rem',
                             backgrouColor: '#F2F2F2',
                             padding: '1rem 2rem',
@@ -103,7 +109,9 @@ const CategoryCard = () => {
                                 marginTop: '6rem',
                                 marginBottom: '2rem',
                                 marginX: '2rem 0rem',
-                                width: '20rem'
+
+                                width: '25rem',
+
                             }}
                         >
                             {categorias[0].texto}
@@ -112,8 +120,10 @@ const CategoryCard = () => {
                     <Card
                         className={responsive.Card}
                         sx={{
-                            minHeight: '20rem',
-                            maxWidth: '33vw',
+
+                            minHeight: 'clamp(80px,33vw,320px)',
+                            maxWidth: '90vw',
+
                             margin: '1rem',
                             backgrouColor: '#F2F2F2',
                             padding: '1rem 2rem',
@@ -127,7 +137,10 @@ const CategoryCard = () => {
                                 marginTop: '6rem',
                                 marginBottom: '2rem',
                                 marginX: '2rem 0rem',
-                                width: '20rem'
+
+                                width: '20rem',
+                                wordWrap: 'break-word'
+
                             }}
                         >
                             {categorias[1].texto}
