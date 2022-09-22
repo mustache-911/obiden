@@ -74,7 +74,7 @@
     margin: 1rem;
 }
 
-a.linkFase {
+.linkFase {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,6 +83,7 @@ a.linkFase {
     color: #000;
     flex: 1;
     margin: 0 1rem;
+    cursor: pointer;
 }
 
 .linkFase h3 {
@@ -120,15 +121,17 @@ a.linkFase {
     border-radius: 45px;
     border: 1px;
     background-color: #212121d0;
-    color: #f9f9f9;
+   
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
 
-.btn p{
+.btn a{
     padding: 0;
     font-size: 1.7em;
     letter-spacing: 2px;
+    text-decoration: none;
+    color: #f9f9f9;
 }
 
 .btn:hover {
@@ -136,7 +139,7 @@ a.linkFase {
     transform: translateY(-7px);
     transition: all 250ms ease-in-out;
     background-color: #212121;
-    box-shadow: 0px 15px 20px rgba(58, 229, 46, 0.4);
+    box-shadow: 0px 15px 20px rgba( 31, 38, 135, 0.37 );
 }
 
 .homeContent{
@@ -150,12 +153,12 @@ a.linkFase {
 .landingImage{
     margin-left: 20px;
     height: 70vh;
-    width: 50%;
+    width: 70vh;
     border-radius: 10px;
-
-    background-image: url(https://www.gov.br/pt-br/campanhas/bicentenario/Bicentenrio.png/@@images/06e6dc8a-b55a-414a-82dd-8966dbdafeb6.png);
-    background-position: center top;
-    background-size: cover;
+    background-image: url(bicentenario.png);
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
 }
 
 .homeLandingWhatIs{
@@ -186,7 +189,7 @@ a.linkFase {
     background-position:center top;
     background-size:cover;
     height: fit-content;
-    padding: clamp(0.5rem,2vh,40rem);
+    padding: clamp(0.5rem,16vh,40rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -301,6 +304,10 @@ a.linkFase {
 }
 
 @media screen and (min-width: 900px) and (max-width: 1150px){
+    .homeLandingWhatIs{
+        width: 80vh;
+    }
+
     .homeLandingWhatIs h3{
         font-size: 2.5em;
     }
@@ -315,6 +322,17 @@ a.linkFase {
 
     .rulesCategories {
         margin: 1.5rem 1rem;
+    }
+
+    .homeContent{
+        flex-direction: column;
+    }
+
+    .landingImage{
+        width: 65%;
+        height: 90vh;
+        margin: 20px;
+        background-size: cover;
     }
 }
 
@@ -337,6 +355,16 @@ a.linkFase {
     
     .rulesCategories {
         margin: 1.5rem 1rem;
+    }
+
+    .homeContent{
+        flex-direction: column;
+    }
+
+    .landingImage{
+        width: 70vh;
+        height: 70vh;
+        margin: 20px;
     }
 }
 
@@ -374,13 +402,13 @@ a.linkFase {
     }
 
     .landingImage{
-        width: 90%;
-        height: 50vh;
+        width: 65vh;
+        height: 70vh;
         margin: 20px;
     }
 
     .homeLandingWhatIs{
-        width: 90%;
+        width: 80%;
         height: fit-content;
     }
 
@@ -515,13 +543,14 @@ a.linkFase {
     }
 
     .landingImage{
-        width: 90%;
-        height: 50vh;
-        margin: 20px;
+        width: 70%;
+        height: 330px;
+        margin: 20px 10px;
+        background-repeat: no-repeat no-repeat;
     }
 
     .homeLandingWhatIs{
-        width: 90%;
+        width: 80%;
         height: fit-content;
     }
 
@@ -641,5 +670,12 @@ a.linkFase {
 
     a.linkFase {
         margin: 1rem auto;
+    }
+
+    @media screen and (max-width: 400px){
+        .landingImage{
+            background-size: cover;
+            height: 230px;
+        }
     }
 }

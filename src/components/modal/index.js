@@ -1,10 +1,7 @@
 import styles from './modal.module.css';
 import * as React from 'react';
 import { Box, Stack, Typography } from '@mui/material'; 
-import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
-import { Card } from '@mui/material/Card';
-import { Margin } from '@mui/icons-material';
 
 const style = {
   position: 'absolute',

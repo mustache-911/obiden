@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useContext } from 'react';
 import { ColorContext } from '../../context/color';
 import Typography from '@mui/material/Typography';
-import { FilterAlt } from '@mui/icons-material';
 import { Stack, Container} from '@mui/material';
 import MultiActionAreaCard from '../card'
 import SelectLabels from '../select'
