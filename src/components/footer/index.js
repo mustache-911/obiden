@@ -57,6 +57,7 @@ const ResponsiveToolBar = () => {
                 >
                     <Stack
                         className={responsive.stack}
+                        direction= "row"
                     >
                         <Box
                             sx= {{
@@ -121,9 +122,9 @@ const ResponsiveToolBar = () => {
                                     //precisa dessas especificacoes de fonte mesmo ?
                                     fontFamily: 'Signika, sans-serif;',
                                     fontWeight: '1',
-                                    fontSize: '9pt',
+                                    fontSize: '11pt',
                                     letterSpacing: '0px',
-                                    margin:'20px 5px -2px 3px',
+                                    margin:'7px 5px -2px 3px',
                                     textDecoration: 'none',
                                 }}
                                 onClick={() =>
@@ -147,8 +148,8 @@ const ResponsiveToolBar = () => {
                                     display: { xs: 'block', md: 'flex' },
                                     letterSpacing: '0px',
                                     fontFamily: 'Signika, sans-serif;',
-                                    fontSize: '8pt',
-                                    fontWeight: 'Bold',
+                                    fontSize: '10pt',
+                                    fontWeight: '600',
                                     marginRight: '5pt',
                                 }}
                                 onClick={() =>
@@ -185,6 +186,29 @@ const ResponsiveToolBar = () => {
                             }
                         />
                         
+                        
+
+                        <Box
+                            component="img"
+                            sx={{
+                                marginTop: 1,
+                                cursor: 'pointer',
+                                height: '100%',
+                                width: '80%',
+                                maxHeight: { xs: 110, md: 110 },
+                                maxWidth: { xs: 105, md: 105 }
+                            }}
+                            alt="MEC"
+                            src={MEC}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.gov.br/mec/pt-br'
+                                    )
+                                )
+                            }
+                        />
+
                         <Box
                             component="img"
                             sx={{
@@ -272,25 +296,6 @@ const ResponsiveToolBar = () => {
                             }
                         />
  
-                        <Box
-                            component="img"
-                            sx={{
-                                margin: 2,
-                                cursor: 'pointer',
-                                maxHeight: { xs: 233, md: 100 },
-                                maxWidth: { xs: 230, md: 170 }
-                            }}
-                            alt="MEC"
-                            src={MEC}
-                            onClick={() =>
-                                navigate(
-                                    window.location.replace(
-                                        'https://www.gov.br/mec/pt-br'
-                                    )
-                                )
-                            }
-                        />
-            
                         
                     </Stack>
                     <Stack
