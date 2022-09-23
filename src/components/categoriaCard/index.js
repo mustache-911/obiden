@@ -10,13 +10,25 @@ const useStyles = makeStyles({
     root: {
         color: '#002443',
         fontFamily: "'Montserrat', sans-serif",
+<<<<<<< HEAD
         fontSize: 'clamp(25px,4vw,50px)'
+=======
+
+        fontSize: 'clamp(25px,4vw,50px)'
+
+>>>>>>> 1ea2d9a33fb9cda73f5b53354897be83bb071ce7
     },
     root2: {
         color: '#212121',
         fontWeight: '-moz-initial',
         fontFamily: "'Montserrat', sans-serif;",
+<<<<<<< HEAD
         fontSize: 'clamp(13px,3.5vw,15px)',
+=======
+
+        fontSize: 'clamp(13px,3.5vw,15px)',
+
+>>>>>>> 1ea2d9a33fb9cda73f5b53354897be83bb071ce7
         marginTop: '2rem'
     },
     p: {
@@ -58,7 +70,7 @@ const CategoryCard = () => {
         },   
         {
             nome: 'Sênior',
-            texto: 'Categoria destinada a estudantes nascidos entre de 31 de dezembro de 2007, inclusive, e 1o de janeiro de 2004, inclusive, desde que não estejam matriculados em algum curso superior.'
+            texto: 'Categoria destinada a estudantes nascidos entre de 1o de janeiro de 2004, inclusive, e 31 de dezembro de 2007, inclusive, desde que não estejam matriculados em algum curso superior.'
         }
     ]
     return (
@@ -88,8 +100,15 @@ const CategoryCard = () => {
                     <Card
                         className={`${responsive.Card}`}
                         sx={{
+<<<<<<< HEAD
                             minHeight: 'clamp(80px,33vw,320px)',
                             maxWidth: '90vw',
+=======
+
+                            minHeight: 'clamp(80px,33vw,320px)',
+                            maxWidth: '90vw',
+
+>>>>>>> 1ea2d9a33fb9cda73f5b53354897be83bb071ce7
                             margin: '1rem',
                             backgrouColor: '#F2F2F2',
                             padding: '1rem 2rem',
@@ -103,7 +122,13 @@ const CategoryCard = () => {
                                 marginTop: '6rem',
                                 marginBottom: '2rem',
                                 marginX: '2rem 0rem',
+<<<<<<< HEAD
                                 width: '25rem',
+=======
+
+                                width: '25rem',
+
+>>>>>>> 1ea2d9a33fb9cda73f5b53354897be83bb071ce7
                             }}
                         >
                             {categorias[0].texto}
@@ -112,8 +137,15 @@ const CategoryCard = () => {
                     <Card
                         className={responsive.Card}
                         sx={{
+<<<<<<< HEAD
                             minHeight: 'clamp(80px,33vw,320px)',
                             maxWidth: '90vw',
+=======
+
+                            minHeight: 'clamp(80px,33vw,320px)',
+                            maxWidth: '90vw',
+
+>>>>>>> 1ea2d9a33fb9cda73f5b53354897be83bb071ce7
                             margin: '1rem',
                             backgrouColor: '#F2F2F2',
                             padding: '1rem 2rem',
@@ -127,8 +159,15 @@ const CategoryCard = () => {
                                 marginTop: '6rem',
                                 marginBottom: '2rem',
                                 marginX: '2rem 0rem',
+<<<<<<< HEAD
                                 width: '20rem',
                                 wordWrap: 'break-word'
+=======
+
+                                width: '20rem',
+                                wordWrap: 'break-word'
+
+>>>>>>> 1ea2d9a33fb9cda73f5b53354897be83bb071ce7
                             }}
                         >
                             {categorias[1].texto}
