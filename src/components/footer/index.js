@@ -56,7 +56,8 @@ const ResponsiveToolBar = () => {
                     sx={{ py: 4 }}
                 >
                     <Stack
-                        className={responsive.stack}
+                        className={responsive.Stack}
+                        direction = "row"
                     >
                         <Box
                             sx= {{
@@ -80,7 +81,8 @@ const ResponsiveToolBar = () => {
                                     fontFamily: 'montserrat',
                                     fontWeight: 400,
                                     fontSize: '13px',
-                                    textDecoration: 'none'
+                                    textDecoration: 'none',
+                                    margin: "10 0 10 0"
                                 }}
                             >
                                 Organização:
@@ -213,7 +215,6 @@ const ResponsiveToolBar = () => {
                 sx={{
                     height: '100%',
                     width: '100%',
-                    
                 }}
                 alignItems="center"
                 justifyContent="center"
