@@ -1,4 +1,5 @@
 import * as React from 'react';
+import responsive from "./footer.module.css";
 import { useContext } from 'react';
 import { ColorContext } from '../../context/color'; 
 import { LanguageContext } from '../../context/language'
@@ -33,7 +34,6 @@ import Unesco from './Footer_img/unesco_logo.png'
 
 
 
-
 const pages = PAGES.NAMES;
 const links = PAGES.LINKS;
 
@@ -56,12 +56,10 @@ const ResponsiveToolBar = () => {
                     sx={{ py: 4 }}
                 >
                     <Stack
-                        direction="row"
-                        alignItems="center"
-                        justifyContent="center"
+                        className={responsive.stack}
                     >
                         <Box
-                            sx={{
+                            sx= {{
                                 height: '100%',
                                 width: '100%',
                                 maxHeight: { xs: 233, md: 30 },
@@ -117,17 +115,16 @@ const ResponsiveToolBar = () => {
                                 justifyContent="right"
                                 textAlign="center"
                                 sx={{
-                                    my: -0.5,
                                     cursor: 'pointer',
                                     color: '#fff',
                                     display: { xs: 'block', md: 'flex' },
+                                    //precisa dessas especificacoes de fonte mesmo ?
                                     fontFamily: 'Signika, sans-serif;',
-                                    fontWeight: 'light',
+                                    fontWeight: '1',
                                     fontSize: '9pt',
                                     letterSpacing: '0px',
-                                    marginRight: '5pt',
-                                    marginLeft: '3px',
-                                    textDecoration: 'none'
+                                    margin:'20px 5px -2px 3px',
+                                    textDecoration: 'none',
                                 }}
                                 onClick={() =>
                                     navigate(
@@ -152,7 +149,7 @@ const ResponsiveToolBar = () => {
                                     fontFamily: 'Signika, sans-serif;',
                                     fontSize: '8pt',
                                     fontWeight: 'Bold',
-                                    marginRight: '5pt'
+                                    marginRight: '5pt',
                                 }}
                                 onClick={() =>
                                     navigate(
@@ -187,7 +184,7 @@ const ResponsiveToolBar = () => {
                                 )
                             }
                         />
-
+                        
                         <Box
                             component="img"
                             sx={{
