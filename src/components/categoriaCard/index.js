@@ -62,7 +62,7 @@ const CategoryCard = () => {
         },   
         {
             nome: 'Sênior',
-            texto: 'Categoria destinada a estudantes nascidos entre de 31 de dezembro de 2007, inclusive, e 1o de janeiro de 2004, inclusive, desde que não estejam matriculados em algum curso superior.'
+            texto: 'Categoria destinada a estudantes nascidos entre de 1o de janeiro de 2004, inclusive, e 31 de dezembro de 2007, inclusive, desde que não estejam matriculados em algum curso superior.'
         }
     ]
     return (

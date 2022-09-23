@@ -30,7 +30,7 @@ const Home = () => {
                     Brasil
                 </p>
                 <button className={styles.btn}>
-                    <a href="https://fractalid.fractaltecnologia.com.br/signup?app_id=32&url_redirect=https%3A%2F%2Fapp.mncti.com.br%2F">INSCREVA-SE</a>
+                    <a href='/'>Inscreva-se a partir do dia 26 de setembro</a>
                 </button>
             </Box>
 
@@ -84,7 +84,7 @@ const Home = () => {
                 {/* Categorias */}
                 <Box className={`${styles.flexBox} ${styles.rulesCategories}`} sx={{ width: 1}}>
                     <Card sx={{p: 5}} className={styles.rulesCard}>
-                        <p>Há <span>2 categorias</span> na Olimpíada: <span>Júnior</span> (estudantes do Ensino Fundamental) e <span>Sênior</span> (Estudantes do Ensino Médio, Ensino Técnico ou EJA).</p>
+                        <p>Há <span>2 categorias</span> na Olimpíada: <span>Júnior</span> e <span>Sênior</span>.</p>
                         <Box className={styles.flexBox}>
                             <Box className={styles.rulesCategories}>
                                 <img alt="" src="../../../Home/student.png" sx={{ m: 1 }} className={styles.iconCard}/>
@@ -298,9 +298,9 @@ const Home = () => {
                             className={styles.btn}
                             target="_blank"
                             rel="noreferrer"
-                            href = "https://fractalid.fractaltecnologia.com.br/signup?app_id=32&url_redirect=https%3A%2F%2Fapp.mncti.com.br%2F"
+                            href = "/"
                         >
-                            Inscreva-se
+                            Inscreva-se a partir de segunda-feira
                         </a>
                     </h3>
                 </Box>

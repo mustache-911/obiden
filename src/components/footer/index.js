@@ -18,7 +18,7 @@ import Mktjr from './Footer_img/Logo_mktjr.png'
 import Ufms from './Footer_img/ufms_logo_1.png'
 import Turismo from './Footer_img/logoministerioturismo.png'
 import Cultura from './Footer_img/logo_secretaria_especial_da_cultura.png'
-import MEC from './Footer_img/MEC_BANDEIRA_LETRA_POSITIVA.png'
+import MEC from './Footer_img/mec_logo.png'
 import Camara from './Footer_img/camara_logo.png'
 import OBA from './Footer_img/OBA_logo.png'
 import UFRN from './Footer_img/UFRN_logo.png'
@@ -274,7 +274,25 @@ const ResponsiveToolBar = () => {
                                 )
                             }
                         />
-
+ 
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 170 }
+                            }}
+                            alt="MEC"
+                            src={MEC}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.gov.br/mec/pt-br'
+                                    )
+                                )
+                            }
+                        />
             
                         
                     </Stack>
