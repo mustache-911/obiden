@@ -21,7 +21,7 @@
 }
 @media screen and (min-width: 420px) and (max-width: 900px) {
     .Stack{
-        width: 25%;
+        width: 80%;
       flex-wrap: wrap;
     } 
 }
