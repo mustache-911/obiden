@@ -56,7 +56,7 @@ const ResponsiveToolBar = () => {
                     sx={{ py: 4 }}
                 >
                     <Stack
-                        className={responsive.stack}
+                        className={responsive.Stack}
                         direction= "row"
                     >
                         <Box
