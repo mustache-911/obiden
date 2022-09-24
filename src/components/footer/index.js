@@ -81,7 +81,8 @@ const ResponsiveToolBar = () => {
                                     fontFamily: 'montserrat',
                                     fontWeight: 400,
                                     fontSize: '13px',
-                                    textDecoration: 'none'
+                                    textDecoration: 'none',
+                                    margin: "10 0 10 0"
                                 }}
                             >
                                 Organização:
@@ -170,7 +171,7 @@ const ResponsiveToolBar = () => {
                             sx={{
                                 margin: 2,
                                 cursor: 'pointer',
-                                height: '80%',
+                                height: '100%',
                                 width: '80%',
                                 maxHeight: { xs: 233, md: 200 },
                                 maxWidth: { xs: 250, md: 120 }
@@ -237,7 +238,6 @@ const ResponsiveToolBar = () => {
                 sx={{
                     height: '100%',
                     width: '100%',
-                    
                 }}
                 alignItems="center"
                 justifyContent="center"
@@ -295,8 +295,7 @@ const ResponsiveToolBar = () => {
                                 )
                             }
                         />
- 
-                        
+                                   
                     </Stack>
                     <Stack
                         flexWrap={'wrap'}

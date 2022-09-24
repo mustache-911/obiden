@@ -23,12 +23,11 @@
         width: 31%;
     }
 }
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 560px) and (max-width: 700px) {
     .stack{
         flex-wrap: wrap;
     }
 }
-
 @media (max-width: 560px) {
     .stack {
         flex-direction: column;
