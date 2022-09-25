@@ -16,12 +16,12 @@
 .Stack {
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-direction: row;
     width: 100vw;
 }
-@media screen and (min-width: 420px) and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .Stack{
-        width: 80%;
-      flex-wrap: wrap;
+        width: 60%;
+        flex-direction: column !important;
     } 
 }

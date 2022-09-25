@@ -18,7 +18,6 @@ import Fractal from './Footer_img/Logo_fractal.png'
 import Mktjr from './Footer_img/Logo_mktjr.png'
 import Ufms from './Footer_img/ufms_logo_1.png'
 import Turismo from './Footer_img/logoministerioturismo.png'
-import Cultura from './Footer_img/logo_secretaria_especial_da_cultura.png'
 import MEC from './Footer_img/mec_logo.png'
 import Camara from './Footer_img/camara_logo.png'
 import OBA from './Footer_img/OBA_logo.png'
@@ -31,7 +30,22 @@ import OBI from './Footer_img/obi_logo.png'
 import SBC from './Footer_img/SBC_logo.png'
 import Unicamp from './Footer_img/unicamp_logo.png'
 import Unesco from './Footer_img/unesco_logo.png'
-
+import UCS from './Footer_img/UCS_logo.png'
+import IFSul from './Footer_img/IFSul_logo.png'
+import sapientia from './Footer_img/sapientia_logo.png'
+import OBO from './Footer_img/OBO_logo.png'
+import fapec from './Footer_img/fapec_logo.png'
+import ON from './Footer_img/ON_logo.png'
+import OBAP from './Footer_img/obap_logo.png'
+import BN from './Footer_img/BN_logo.png'
+import polaron from './Footer_img/polaron_logo.png'
+import ITA from './Footer_img/ITA_logo.png'
+import EduSpace from './Footer_img/EduSpace_logo.png'
+import TorneioFem from './Footer_img/torneiofeminino_logo.png'
+import UFSM from './Footer_img/UFSM_logo.png'
+import obinvest from './Footer_img/obinvest_logo.png'
+import IMPA from './Footer_img/impa_logo.png'
+import MDR from './Footer_img/mdr_logo.png'
 
 
 const pages = PAGES.NAMES;
@@ -49,7 +63,6 @@ const ResponsiveToolBar = () => {
         <Box style={{ background: '#002443' }}>
             <Container maxWidth="xl">
                 <Stack
-                    direction="column"
                     alignItems="center"
                     justifyContent="center"
                     spacing={2}
@@ -93,9 +106,9 @@ const ResponsiveToolBar = () => {
                             sx={{
                                 marginLeft: '15px',
                                 marginRight: '15px',
+                                marginBottom: '20px',
+                                marginTop: '20px',
                                 cursor: 'pointer',
-                                height: '50%',
-                                width: '50%',
                                 maxHeight: { xs: 75, md: 75 },
                                 maxWidth: { xs: 75, md: 75 }
                             }}
@@ -156,7 +169,7 @@ const ResponsiveToolBar = () => {
                                 onClick={() =>
                                     navigate(
                                         window.location.replace(
-                                            'https://www.gov.br/turismo/pt-br'
+                                            'https://dados.gov.br/organization/about/secretariaespecialdacultura'
                                         )
                                     )
                                 }
@@ -171,10 +184,8 @@ const ResponsiveToolBar = () => {
                             sx={{
                                 margin: 2,
                                 cursor: 'pointer',
-                                height: '100%',
-                                width: '80%',
                                 maxHeight: { xs: 233, md: 200 },
-                                maxWidth: { xs: 250, md: 120 }
+                                maxWidth: { xs: 120, md: 120 }
                             }}
                             alt="Turismo"
                             src={Turismo}
@@ -216,7 +227,7 @@ const ResponsiveToolBar = () => {
                                 margin: 2,
                                 cursor: 'pointer',
                                 height: '100%',
-                                width: '80%',
+                                width: '90%',
                                 maxHeight: { xs: 250, md: 250 },
                                 maxWidth: { xs: 300, md: 220 }
                             }}
@@ -276,7 +287,7 @@ const ResponsiveToolBar = () => {
                                 Apoio:
                             </Typography>
                         </Box>
-    
+
                         <Box
                             component="img"
                             sx={{
@@ -291,6 +302,25 @@ const ResponsiveToolBar = () => {
                                 navigate(
                                     window.location.replace(
                                         'https://www.camara.leg.br/'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 170 }
+                            }}
+                            alt="fapec"
+                            src={fapec}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://fapec.org/'
                                     )
                                 )
                             }
@@ -406,6 +436,61 @@ const ResponsiveToolBar = () => {
                                 )
                             }
                         />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                maxHeight: { xs: 233, md: 200 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="ON"
+                            src={ON}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.gov.br/observatorio/pt-br'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 1,
+                                marginBottom: 2,
+                                maxHeight: { xs: 100, md: 100 },
+                                maxWidth: { xs: 150, md: 150 }
+                            }}
+                            alt="IMPA"
+                            src={IMPA}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://impa.br/'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                maxHeight: { xs: 100, md: 100 },
+                                maxWidth: { xs: 150, md: 150 }
+                            }}
+                            alt="BN"
+                            src={BN}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.gov.br/bn/pt-br'
+                                    )
+                                )
+                            }
+                        />
                         
                         <Box
                             component="img"
@@ -425,6 +510,46 @@ const ResponsiveToolBar = () => {
                                 )
                             }
                         />
+
+                         
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="Logo ITA"
+                            src={ITA}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'http://www.ita.br/'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="UFSM"
+                            src={UFSM}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.ufsm.br/'
+                                    )
+                                )
+                            }
+                        />
+
 
                         
                         <Box
@@ -492,6 +617,25 @@ const ResponsiveToolBar = () => {
                                 maxHeight: { xs: 233, md: 100 },
                                 maxWidth: { xs: 230, md: 200 }
                             }}
+                            alt="obinvest"
+                            src={obinvest}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://obinvest.org/'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
                             alt="OBR"
                             src={OBR}
                             onClick={() =>
@@ -540,6 +684,26 @@ const ResponsiveToolBar = () => {
                                 )
                             }
                         />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="OBAP"
+                            src={OBAP}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://obap.ifsuldeminas.edu.br/'
+                                    )
+                                )
+                            }
+                        />
+
                         <Box
                             component="img"
                             sx={{
@@ -577,7 +741,138 @@ const ResponsiveToolBar = () => {
                             }
                         />
 
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="UCS"
+                            src={UCS}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.ucs.br/site'
+                                    )
+                                )
+                            }
+                        />
 
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="IFSul"
+                            src={IFSul}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://portal.ifsuldeminas.edu.br/'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="sapientia"
+                            src={sapientia}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://olimpiadadofuturo.com.br/'
+                                    )
+                                )
+                            }
+                        />  
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="OBO"
+                            src={OBO}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://olimpiada.maredeciencia.eco.br/'
+                                    )
+                                )
+                            }
+                        />  
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="polaron"
+                            src={polaron}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://proex.uergs.edu.br/programas/polaron'
+                                    )
+                                )
+                            }
+                        />  
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 1,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="EduSpace"
+                            src={EduSpace}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'http://plataforma.cortexai.com.br/users/sign_in'
+                                    )
+                                )
+                            }
+                        />  
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="TorneioFem"
+                            src={TorneioFem}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://tfcbr.inf.ufsm.br/'
+                                    )
+                                )
+                            }
+                        />  
 
                         
                     </Stack>
