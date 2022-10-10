@@ -56,11 +56,11 @@ const CategoryCard = () => {
     const categorias = [
         {
             nome: 'Júnior',
-            texto: 'Categoria destinada a estudantes nascidos depois de 1º de janeiro de 2008, inclusive. Salientamos que as questões serão elaboradas para estudantes acima de 11 anos. Entretanto está facultado o direito, aos estudantes mais novos, de participar desta categoria.'
+            texto: 'Categoria destinada a estudantes nascidos depois de 1º de janeiro de 2008, inclusive. Salientamos que as questões serão elaboradas para estudantes acima de 11 anos. Entretanto está facultado o direito, aos estudantes mais novos, de participar desta categoria (Ensino Fundamental).'
         },   
         {
             nome: 'Sênior',
-            texto: 'Categoria destinada a estudantes nascidos entre de 1o de janeiro de 2004, inclusive, e 31 de dezembro de 2007, inclusive, desde que não estejam matriculados em algum curso superior.'
+            texto: 'Categoria destinada a estudantes nascidos entre de 1o de janeiro de 2004, inclusive, e 31 de dezembro de 2007, inclusive, desde que não estejam matriculados em algum curso superior (Ensino Médio e Ensino Técnico).'
         }
     ]
     return (

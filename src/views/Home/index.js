@@ -29,8 +29,16 @@ const Home = () => {
                     Inscreva-se na Olimpíada do Bicentenário da Independência do
                     Brasil
                 </p>
+
+                
+                <Card sx={{}} className={styles.warningcard}>
+                    <h2>Atenção</h2>
+                    <p>Inscrições para a Olimpíada prorrogadas até dia de 10 de outubro</p>
+                </Card>
+                
+
                 <button className={styles.btn}>
-                    <a href='/'>Inscreva-se a partir do dia 26 de setembro</a>
+                    <a href='https://fractalid.fractaltecnologia.com.br/signup?app_id=32&url_redirect=https%3A%2F%2Fapp.olimpiadabrasil.org%2F'>Inscreva-se</a>
                 </button>
             </Box>
 
@@ -105,18 +113,23 @@ const Home = () => {
                         <Box className={`${styles.flexBox} ${styles.rulesFases}`}>
                             <Box className={styles.linkFase} onClick={() => document.getElementById('fase0102').scrollIntoView({block: "center", behavior: "smooth"})}>
                                 <img alt="" src="../../../Home/device.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
-                                <h3>Fases 1 e 2</h3>
-                                <p>As provas serão online e poderão ser realizadas em computador, tablet ou aplicativo.</p>
+                                <h3>Fase 1</h3>
+                                <p>As provas serão online e poderão ser realizadas com consulta, em computador, tablet ou aplicativo próprio.</p>
+                            </Box>
+                            <Box className={styles.linkFase} onClick={() => document.getElementById('fase0102').scrollIntoView({block: "center", behavior: "smooth"})}>
+                                <img alt="" src="../../../Home/device.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
+                                <h3>Fase 2</h3>
+                                <p>As provas serão online e poderão ser realizadas sem consulta, em computador, tablet ou aplicativo próprio.</p>
                             </Box>
                             <Box className={styles.linkFase} onClick={() => document.getElementById('fase03').scrollIntoView({block: "center", behavior: "smooth"})}>
                                 <img alt="" src="../../../Home/online-test.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
                                 <h3>Fase 3</h3>
-                                <p>A prova será presencial ou virtual, sob supervisão.</p>
+                                <p>A prova será presencial em instituição pública do município, em computador, tablet ou aplicativo, sob supervisão de professores.</p>
                             </Box>
                             <Box className={styles.linkFase} onClick={() => document.getElementById('fase04').scrollIntoView({block: "center", behavior: "smooth"})}>
                                 <img alt="" src="../../../Home/congresso-nacional-do-brasil.png" sx={{ m: 1.5 }} className={styles.iconCard}/>
                                 <h3>Fase 4</h3>
-                                <p>Ocorrerá em Brasília e serão proporcionados transporte e hospedagem aos estudantes e seus responsáveis, caso necessário.</p>
+                                <p>Evento presencial em Brasília para premiação do melhor participante de cada categoria de cada estado, com passagens e diárias aos estudantes e seus responsáveis, se necessário.</p>
                             </Box>
                         </Box>
                     </Card>
@@ -153,7 +166,7 @@ const Home = () => {
                 <Timeline position="alternate" className={styles.timeline}>
                     <TimelineItem>
                         <TimelineOppositeContent sx={{ m: 'auto 0' }}>
-                            <p>1 a 9 de outubro</p>
+                            <p>1 a 10 de outubro</p>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
@@ -298,9 +311,9 @@ const Home = () => {
                             className={styles.btn}
                             target="_blank"
                             rel="noreferrer"
-                            href = "/"
+                            href = "https://fractalid.fractaltecnologia.com.br/signup?app_id=32&url_redirect=https%3A%2F%2Fapp.olimpiadabrasil.org%2F"
                         >
-                            Inscreva-se a partir de segunda-feira
+                            Inscreva-se
                         </a>
                     </h3>
                 </Box>

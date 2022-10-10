@@ -1,13 +1,8 @@
 import * as React from 'react';
 import responsive from "./footer.module.css";
-import { useContext } from 'react';
-import { ColorContext } from '../../context/color'; 
-import { LanguageContext } from '../../context/language'
 import { useNavigate } from 'react-router-dom';
 import { Box, Stack } from '@mui/material';
-import { PAGES } from '../../constants/pages'
-import Divider from '@mui/material/Divider';
-import { Instagram, Facebook, LinkedIn, Twitter } from '@mui/icons-material'
+import { Instagram } from '@mui/icons-material'
 import AndroidIcon from '@mui/icons-material/Android';
 import AppleIcon from '@mui/icons-material/Apple';
 import Typography from '@mui/material/Typography';
@@ -45,17 +40,24 @@ import TorneioFem from './Footer_img/torneiofeminino_logo.png'
 import UFSM from './Footer_img/UFSM_logo.png'
 import obinvest from './Footer_img/obinvest_logo.png'
 import IMPA from './Footer_img/impa_logo.png'
-import MDR from './Footer_img/mdr_logo.png'
+import ONC from './Footer_img/ONC_logo.png'
+import MDR from './Footer_img/MDR_logo.png'
+import MDC from './Footer_img/MDC_logo.png'
+import vitalis from './Footer_img/vitalis_logo.png'
+import OBECON from './Footer_img/obecon_logo.png'
+import MC from './Footer_img/mc2_logo.png'
+import OBS from './Footer_img/OBS_logo.png'
+import Obmep from './Footer_img/obmep_logo.png'
+import OGB from './Footer_img/OGB_logo.png'
+import MOVMEN from './Footer_img/movmen_logo.png'
+import OBM from './Footer_img/OBM_logo.png'
+import obsat from './Footer_img/obsat_logo.png'
+import CECIERJ from './Footer_img/CECIERJ_logo.png'
+import ENAGRO from './Footer_img/ENAGRO_logo.png'
+import OBN from './Footer_img/OBN_logo.png'
 
-
-const pages = PAGES.NAMES;
-const links = PAGES.LINKS;
 
 const ResponsiveToolBar = () => {
-  const { mainColor } = useContext(ColorContext)
-  const { language, setLanguage } = useContext(LanguageContext)
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
 
 
@@ -205,8 +207,6 @@ const ResponsiveToolBar = () => {
                             sx={{
                                 marginTop: 1,
                                 cursor: 'pointer',
-                                height: '100%',
-                                width: '80%',
                                 maxHeight: { xs: 110, md: 110 },
                                 maxWidth: { xs: 105, md: 105 }
                             }}
@@ -226,10 +226,10 @@ const ResponsiveToolBar = () => {
                             sx={{
                                 margin: 2,
                                 cursor: 'pointer',
-                                height: '100%',
-                                width: '90%',
                                 maxHeight: { xs: 250, md: 250 },
-                                maxWidth: { xs: 300, md: 220 }
+                                maxWidth: { xs: 300, md: 220 },
+                                width: '112%',
+                                heigth: '112%'
                             }}
                             alt="MCTI"
                             src={MCTI}
@@ -246,30 +246,16 @@ const ResponsiveToolBar = () => {
 
                 <Box
                 
-                sx={{
-                    height: '100%',
-                    width: '100%',
-                }}
+    
                 alignItems="center"
                 justifyContent="center"
                 >
                     <Stack
-                        flexWrap={'wrap'}
+                        className= {responsive.Stack}
                         direction="row"
-                        alignItems="center"
-                        justifyContent="center"
-                        
+                        alignItems='center'     
                     >
-                        <Box
-                            sx={{
-                                height: '100%',
-                                width: '100%',
-                                maxHeight: { xs: 233, md: 30 },
-                                maxWidth: { xs: 250, md: 100 }
-                            }}
-                            alignItems="center"
-                            justifyContent="center"
-                        >
+                
                             <Typography
                                 noWrap
                                 alignItems="center"
@@ -286,7 +272,26 @@ const ResponsiveToolBar = () => {
                             >
                                 Apoio:
                             </Typography>
-                        </Box>
+                     
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 170 }
+                            }}
+                            alt="fapec"
+                            src={fapec}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://fapec.org/'
+                                    )
+                                )
+                            }
+                        />
 
                         <Box
                             component="img"
@@ -312,15 +317,53 @@ const ResponsiveToolBar = () => {
                             sx={{
                                 margin: 2,
                                 cursor: 'pointer',
-                                maxHeight: { xs: 233, md: 100 },
-                                maxWidth: { xs: 230, md: 170 }
+                                maxHeight: { xs: 68, md: 68 },
+                                maxWidth: { xs: 118, md: 118 },
                             }}
-                            alt="fapec"
-                            src={fapec}
+                            alt="MDC"
+                            src={MDC}
                             onClick={() =>
                                 navigate(
                                     window.location.replace(
-                                        'https://fapec.org/'
+                                        'https://www.gov.br/cidadania/pt-br'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin:2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 190, md: 190 },
+                                maxWidth: { xs: 130, md: 130 }
+                            }}
+                            alt="MC"
+                            src={MC}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.gov.br/mcom/pt-br'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 250, md: 250 },
+                                maxWidth: { xs: 300, md: 300 }
+                            }}
+                            alt="MDR"
+                            src={MDR}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.gov.br/mdr/pt-br'
                                     )
                                 )
                             }
@@ -332,6 +375,7 @@ const ResponsiveToolBar = () => {
                         direction="row"
                         alignItems="center"
                         justifyContent="center"
+                        className= {responsive.Parceria}
                         
                     >
                         <Box
@@ -460,8 +504,8 @@ const ResponsiveToolBar = () => {
                             sx={{
                                 margin: 1,
                                 marginBottom: 2,
-                                maxHeight: { xs: 100, md: 100 },
-                                maxWidth: { xs: 150, md: 150 }
+                                maxHeight: { xs: 70, md: 70 },
+                                maxWidth: { xs: 120, md: 120 }
                             }}
                             alt="IMPA"
                             src={IMPA}
@@ -665,7 +709,64 @@ const ResponsiveToolBar = () => {
                                 )
                             }
                         />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="OBM"
+                            src={OBM}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.obm.org.br/'
+                                    )
+                                )
+                            }
+                        />
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="OGB"
+                            src={OGB}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.unifal-mg.edu.br/obgeografia/'
+                                    )
+                                )
+                            }
+                        />
                         
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 250, md: 250 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="Obmep"
+                            src={Obmep}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'http://www.obmep.org.br/'
+                                    )
+                                )
+                            }
+                        />
+
                         <Box
                             component="img"
                             sx={{
@@ -712,6 +813,26 @@ const ResponsiveToolBar = () => {
                                 maxHeight: { xs: 233, md: 100 },
                                 maxWidth: { xs: 230, md: 200 }
                             }}
+                            alt="ONC"
+                            src={ONC}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.onciencias.org/'
+                                    )
+                                )
+                            }
+                        />
+
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
                             alt="SBC"
                             src={SBC}
                             onClick={() =>
@@ -722,6 +843,27 @@ const ResponsiveToolBar = () => {
                                 )
                             }
                         />
+
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
+                            alt="OBS"
+                            src={OBS}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.sbc.org.br/'
+                                    )
+                                )
+                            }
+                        />
+
                         <Box
                             component="img"
                             sx={{
@@ -825,6 +967,25 @@ const ResponsiveToolBar = () => {
                                 maxHeight: { xs: 233, md: 100 },
                                 maxWidth: { xs: 230, md: 200 }
                             }}
+                            alt="Obecon"
+                            src={OBECON}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://obecon.org/'
+                                    )
+                                )
+                            }
+                        />  
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+                            }}
                             alt="polaron"
                             src={polaron}
                             onClick={() =>
@@ -862,6 +1023,7 @@ const ResponsiveToolBar = () => {
                                 cursor: 'pointer',
                                 maxHeight: { xs: 233, md: 100 },
                                 maxWidth: { xs: 230, md: 200 }
+
                             }}
                             alt="TorneioFem"
                             src={TorneioFem}
@@ -873,6 +1035,122 @@ const ResponsiveToolBar = () => {
                                 )
                             }
                         />  
+
+<Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 233, md: 100 },
+                                maxWidth: { xs: 230, md: 200 }
+
+                            }}
+                            alt="MOVFem"
+                            src={MOVMEN}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.ufsm.br/projetos/pesquisa/meninas-olimpicas/'
+                                    )
+                                )
+                            }
+                        />  
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 140, md: 140 },
+                                maxWidth: { xs: 180, md: 180 }
+                            }}
+                            alt="vitalis"
+                            src={vitalis}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://olimpiadademedicina.org/'
+                                    )
+                                )
+                            }
+                        />  
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 140, md: 140 },
+                                maxWidth: { xs: 180, md: 180 }
+                            }}
+                            alt="OBSAT"
+                            src={obsat}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.obsat.org.br/'
+                                    )
+                                )
+                            }
+                        />  
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 140, md: 140 },
+                                maxWidth: { xs: 180, md: 180 }
+                            }}
+                            alt="ENAGRO"
+                            src={ENAGRO}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://enagro.agricultura.gov.br/'
+                                    )
+                                )
+                            }
+                        />  
+
+                        <Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 140, md: 140 },
+                                maxWidth: { xs: 180, md: 180 }
+                            }}
+                            alt="CECIERJ"
+                            src={CECIERJ}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www.cecierj.edu.br/'
+                                    )
+                                )
+                            }
+                        />  
+
+<Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxHeight: { xs: 140, md: 140 },
+                                maxWidth: { xs: 180, md: 180 }
+                            }}
+                            alt="obn"
+                            src={OBN}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://brazilianbrainbee.org/'
+                                    )
+                                )
+                            }
+                        />  
+
 
                         
                     </Stack>
