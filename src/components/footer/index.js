@@ -375,8 +375,6 @@ const ResponsiveToolBar = () => {
                         direction="row"
                         alignItems="center"
                         justifyContent="center"
-                        className= {responsive.Parceria}
-                        
                     >
                         <Box
                             sx={{
