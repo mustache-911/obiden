@@ -1,0 +1,29 @@
+.Stack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Card {
+    background: #fff;
+    padding: 1vw;
+    margin: 1vw 3vw;
+    width: clamp(75px, 42vw, 350px);
+    border-top: 5px #002443 solid;
+}
+
+
+@media(max-width: 670px) {
+    .Stack {
+        flex-direction: column;
+    }
+
+    .Card {
+        background: #fff;
+        padding: 0.5vw;
+        margin: 2vh 0.5vw;
+        height: auto;
+        width: 90vw;
+    }
+}

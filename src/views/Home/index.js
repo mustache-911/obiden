@@ -10,18 +10,20 @@ import {
     TimelineOppositeContent
 } from '@mui/lab'
 import pdf from './regulamento_olimpiada.pdf'
+import cidadessempolo from './cidades_sem_polos.pdf'
 import CategoryCard from '../../components/categoriaCard'
+import BibliographyCard from '../../components/bibliografiaCard'
 import livro1 from './livros/livro1.png'
-import livro2 from './livros/livro2.png'
 import livro3 from './livros/livro3.png'
 import livro4 from './livros/livro4.png'
 import livro5 from './livros/livro5.png'
 import livro6 from './livros/livro6.png'
 import livro7 from './livros/livro7.png'
 import livro8 from './livros/livro8.png'
-import livro9 from './livros/livro9.png'
+import livro2 from './livros/livro2.png'
 import livro10 from './livros/livro10.png'
 import livro11 from './livros/livro11.png'
+import WarningCard from '../../components/warningCard'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -41,12 +43,7 @@ const Home = () => {
                 <h1>
                     INDEPENDÊNCIA <br /> OU <br /> MORTE
                 </h1>
-
-                <Card className={styles.warningcard}>
-                    <h2>Atenção!</h2>
-                        <p>O início da segunda fase foi adiado para o dia 22 de outubro</p>
-                </Card>
-                
+                <WarningCard/>                         
             </Box>
 
             
@@ -161,7 +158,17 @@ const Home = () => {
             <Box className={styles.bibliographycontainer} sx={{flexDirection: "column", paddingBottom:'1em'}}>
                 <h1>Material de estudo</h1>
                 <p>Recomendamos que os participantes utilizem os seguintes materiais 
-                para estudar para a Olimpíada do Bicentenário da Independência</p>
+                para estudar para a Olimpíada do Bicentenário da Independência.</p>
+                <b>Bibliografia para a terceira fase da Olimpíada: </b>
+
+                <Box  id="categorias">
+                <Stack>
+                    <BibliographyCard />
+                </Stack>
+            </Box>
+
+            <b>Bibliografia complementar:</b>
+
                 <Stack
                         flexWrap={'wrap'}
                         direction="row"
@@ -169,8 +176,27 @@ const Home = () => {
                         justifyContent="center"
                         className={styles.bookscontainer}
                 >
-                       
-                        <Box
+
+<Box
+                            component="img"
+                            sx={{
+                                margin: 2,
+                                cursor: 'pointer',
+                                maxWidth:'150px',
+                                maxHeight:'200px'
+                
+                            }}
+                            src={livro2}
+                            onClick={() =>
+                                navigate(
+                                    window.location.replace(
+                                        'https://www2.camara.leg.br/a-camara/documentos-e-pesquisa/arquivo/sites-tematicos/200-anos-de-independencia-do-brasil/a-independencia-1/catalogos/jose-bonifacio'
+                                    )
+                                )
+                            }
+                    />
+
+                    <Box
                                 
                                 component="img"
                                 sx={{
@@ -185,25 +211,6 @@ const Home = () => {
                                     navigate(
                                         window.location.replace(
                                             'https://www2.camara.leg.br/a-camara/documentos-e-pesquisa/arquivo/sites-tematicos/200-anos-de-independencia-do-brasil/a-independencia-1/catalogos/leopoldina-imperatriz-e-maria-do-brasil'
-                                        )
-                                    )
-                                }
-                        />
-
-                        <Box
-                                component="img"
-                                sx={{
-                                    margin: 2,
-                                    cursor: 'pointer',
-                                    maxWidth:'150px',
-                                    maxHeight:'200px'
-                    
-                                }}
-                                src={livro2}
-                                onClick={() =>
-                                    navigate(
-                                        window.location.replace(
-                                            'https://www2.camara.leg.br/a-camara/documentos-e-pesquisa/arquivo/sites-tematicos/200-anos-de-independencia-do-brasil/a-independencia-1/catalogos/d-joao-vi-e-a-construcao-do-brasil'
                                         )
                                     )
                                 }
@@ -317,30 +324,12 @@ const Home = () => {
                                 onClick={() =>
                                     navigate(
                                         window.location.replace(
-                                            'https://livraria.camara.leg.br/jose-bonifacio-de-andrada-patriarca-da-nacionalidade'
+                                            'https://livraria.camara.leg.br/d-joao-vi-e-a-construcao-das-bases-do-estado-nacional'
                                         )
                                     )
                                 }
                         />
 
-                        <Box
-                                component="img"
-                                sx={{
-                                    margin: 2,
-                                    cursor: 'pointer',
-                                    maxWidth:'150px',
-                                    maxHeight:'200px'
-                    
-                                }}
-                                src={livro9}
-                                onClick={() =>
-                                    navigate(
-                                        window.location.replace(
-                                            'https://livraria.camara.leg.br/jose-bonifacio-de-andrada-patriarca-da-nacionalidade'
-                                        )
-                                    )
-                                }
-                        />
 
                         <Box
                                 component="img"
@@ -379,6 +368,8 @@ const Home = () => {
                                     )
                                 }
                         />
+                        
+
                 </Stack>
                 
                

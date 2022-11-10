@@ -26,8 +26,22 @@
     justify-content: center;
     background-color: #fefefe;
     border-top: 5px #002443 solid;
+    font-size: 1em;
+}
+
+.warningcard {
+    width: 50%;
+    height: auto;
+    padding: 5px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fefefe;
+    border-top: 5px #002443 solid;
     font-size: 0.8em;
 }
+
 
 .rulesCard span {
     font-weight: 500;
@@ -133,7 +147,6 @@
     border-radius: 45px;
     border: 1px;
     background-color: #212121d0;
-   
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
@@ -705,6 +718,10 @@
 }
 
 .bibliographycontainer p{
+    padding: 1em;
+}
+
+.bibliographycontainer b{
     padding: 1em;
 }
 
