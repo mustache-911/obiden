@@ -2,17 +2,18 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import ResponsiveAppBar from './components/navbar'
 import Home from './views/Home'
+import Award from './views/Award'
 import AboutUs from './views/AboutUs'
 import Cases from './views/Cases'
 
 function RoutesComponent() {
     return (
         <Routes>
-            <Route path='/' element={<ResponsiveAppBar />} >
-                <Route path='' element={<Home />} /> 
-                <Route path='aboutus' element={<AboutUs />} /> 
-                <Route path='cases' element={<Cases />} /> 
-            </Route>
+            <Route path='/' element={<Award />} />
+            {/* <Route path='/' element={<ResponsiveAppBar />} > */}
+                {/* <Route path='aboutus' element={<AboutUs />} />  */}
+                {/* <Route path='cases' element={<Cases />} />  */}
+            {/* </Route> */}
             {/* <Route
                 path='/'
                 element={<NavBar />}
