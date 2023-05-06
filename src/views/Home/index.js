@@ -43,7 +43,8 @@ const Home = () => {
                 <h1>
                     INDEPENDÊNCIA <br /> OU <br /> MORTE
                 </h1>
-                <WarningCard/>                         
+                <img src="../../../Home/awards.png" className={styles.awardsImg}/>
+                {/* <WarningCard/>                          */}
             </Box>
 
             

@@ -362,6 +362,12 @@
 }
 
 @media screen and (min-width: 767px) and (max-width: 900px){
+    .awardsImg{
+        width: auto;
+        height: 66%;
+        margin: 0 0 1rem 0 ;
+    }
+
     .homeLandingWhatIs h3{
         font-size: 2em;
     }
@@ -394,6 +400,12 @@
 }
 
 @media screen and (min-width: 500px) and (max-width: 767px){
+
+    .awardsImg{
+        width: auto;
+        height: 66%;
+        margin: 0 0 1rem 0 ;
+    }
     .homeLandingContainer h1{
         font-size: 3em;
     
@@ -531,6 +543,11 @@
 }
 
 @media screen and (max-width: 500px){
+    .awardsImg{
+        width: 90%;
+        height: auto;
+        margin: 0 0 1rem 0 ;
+    }
     .homeLandingContainer h1{
         font-size: 4vh;
     
@@ -726,6 +743,11 @@
 }
 
 @media screen and (min-width: 900px){
+    .awardsImg{
+        width: auto;
+        height: 60%;
+        margin: 0 0 1rem 0 ;
+    }
     .bookscontainer{
         width: 70%;
     }

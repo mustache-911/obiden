@@ -9,11 +9,12 @@ import Cases from './views/Cases'
 function RoutesComponent() {
     return (
         <Routes>
-            <Route path='/' element={<Award />} />
-            {/* <Route path='/' element={<ResponsiveAppBar />} > */}
-                {/* <Route path='aboutus' element={<AboutUs />} />  */}
-                {/* <Route path='cases' element={<Cases />} />  */}
-            {/* </Route> */}
+            {/* <Route path='/' element={<Award />} /> */}
+            <Route path='/' element={<ResponsiveAppBar />} >
+                <Route path="" element={<Home />} />
+                <Route path='aboutus' element={<AboutUs />} />
+                <Route path='cases' element={<Cases />} />
+            </Route>
             {/* <Route
                 path='/'
                 element={<NavBar />}
