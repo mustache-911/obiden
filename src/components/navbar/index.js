@@ -110,11 +110,12 @@ const ResponsiveAppBar = () => {
       
             <Box spacing sx={{ display: { xs: 'none', md: 'block' } }}>
             <Stack direction="row" alignItems="right" justifyContent="right" spacing={3}  >
-            <a href="https://app.olimpiadabrasil.org/">
+          
             <ColorButton variant="contained" startIcon={<LoginIcon/>} disableRipple>
              Login
             </ColorButton>
-            </a>
+           
+
             <ColorButton variant="contained" onClick={() => document.getElementById('sobre').scrollIntoView({block: "center", behavior: "smooth"})} startIcon={<PeopleIcon/>} disableRipple>
              O que é?
             </ColorButton>
